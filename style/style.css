@@ -74,7 +74,7 @@ acronym, abbr {
 
 
 h1 {
-	font-size: 30px !important;
+	font-size: 30px;
 	padding: 10px;
 }
 h2 {
@@ -151,25 +151,25 @@ h3 {
 }
 
 #sidebar a {
-	border: none;
-	font-size: 1.2em;
-	padding: 2px 4px;
+	font-size: 14px;
 }
 
 #sidebar p {
 	font-size: 13px;
 }
 
-
-
-/*** Posts ***/
-article {
-	margin-bottom: 40px;
+.hc__nick{
+	color: #ffffff !important;
+	font-size: 17px !important;
 }
 
+div .hc__messages .hc__message__txt{
+	color: #c2d8da !important;
+}
+
+/*** Posts ***/
 article h1 {
-	font-size: 24px;
-	margin: 0 0 10px 0;
+	margin-left: 20px;	
 }
 article h1 a {
 	border: none;
@@ -185,7 +185,8 @@ article img {
 }
 
 article ul { 
-    padding: 0 0 10px 20px; 
+    padding: 0 0 10px 20px;
+    border: 2px dashed #c2d8da;
 }
 
 article ol { 
