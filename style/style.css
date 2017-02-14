@@ -10,7 +10,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 body {
-	//background-image: url(/images/bg.jpg);
 	line-height: 1;
 }
 ol, ul {
@@ -47,8 +46,7 @@ a:hover {
 	color: #000000;
 }
 
-p, pre { margin-bottom: 15px; }
-ol li, ul li { margin-top: 10px; margin-bottom: 10px; }
+p, pre { margin-bottom: 10px; }
 em, i { font-style: italic; }
 strong, b { font-weight: bold; }
 small { font-size: 0.85em; }
@@ -142,9 +140,9 @@ h3 {
 #sidebar {
 	position: absolute;
 	text-align: right;
-	width: 220px;
+	width: 210px;
 	top: 0;
-	right: -250px;
+	right: -230px;
 }
 
 #sidebar li {
@@ -187,7 +185,7 @@ article img {
 }
 
 article ul { 
-    padding: 0 0 18px 30px; 
+    padding: 0 0 10px 20px; 
 }
 
 article ol { 
@@ -198,6 +196,8 @@ article .meta {
 	padding-top: 6px;
 	font-size: 0.85em;
 	font-style: italic;
+	position: absolute;
+	right: 0px;
 }
 
 img.left {
@@ -229,15 +229,6 @@ img.center {
 
 .postnavigation .right {
 	float: right;
-}
-
-#background {
-	position: absolute;
-	left: 0; right: 0; top: 0; bottom: 0;
-	background: url(/images/bg.jpg);
-	background-position: bottom;
-	z-index: -1;
-	filter: saturate(5);
 }
 
 /*** Media Queries ***/
