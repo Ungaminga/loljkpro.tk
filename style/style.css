@@ -158,6 +158,10 @@ h3 {
 	font-size: 13px;
 }
 
+.readmore {
+	text-align: right;
+}
+
 .hc__nick{
 	color: #ffffff !important;
 	font-size: 17px !important;

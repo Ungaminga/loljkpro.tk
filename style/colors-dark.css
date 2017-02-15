@@ -1,5 +1,6 @@
 html, body {
 	color: #c2d8da;
+	background-color: black;
 	background-image: url(/images/bg.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
