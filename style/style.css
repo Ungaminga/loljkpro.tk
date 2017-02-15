@@ -75,7 +75,7 @@ acronym, abbr {
 
 h1 {
 	font-size: 30px;
-	padding: 10px;
+	text-indent: 10px;
 }
 h2 {
 	font-size: 15px;
@@ -187,6 +187,7 @@ article img {
 article ul { 
     padding: 0 0 10px 20px;
     border: 2px dashed #c2d8da;
+    margin-bottom: 5px;
 }
 
 article ol { 
@@ -199,6 +200,10 @@ article .meta {
 	font-style: italic;
 	position: absolute;
 	right: 0px;
+}
+
+article p {
+	text-indent: 20px;
 }
 
 img.left {
