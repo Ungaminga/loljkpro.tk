@@ -79,17 +79,14 @@ article h1 {
 	text-indent: 10px;
 }
 
-article img {
-	display: block;
-	text-align: center;
-	margin: 0 auto 1em auto;
-	max-width:100%;
-}
-
 article ul { 
     padding: 0 0 10px 20px;
     border: 2px dashed #c2d8da;
     margin-bottom: 5px;
+}
+
+article li > ul {
+	border: none;
 }
 
 article .meta {
@@ -103,6 +100,23 @@ article .meta {
 article p {
 	margin-bottom: 10px;
 	text-indent: 20px;
+}
+
+.post {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.post-content {
+	padding: 10px;
+}
+
+/* DCSS resize images */
+img[src$=".png"] {
+	width: 32px;
+	height: auto;
+	object-fit: contain;
+	position: relative;
+	vertical-align: middle;
 }
 
 /*** Pagination 

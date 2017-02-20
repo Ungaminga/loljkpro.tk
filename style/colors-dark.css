@@ -7,26 +7,30 @@ html, body {
 	background-position: center;
 }
 
-a:hover {
+a:hover img{
+	background-color: yellow;
+
+}
+
+a:hover{
 	background-color: #073642;
 	border-color: #aaaa00;
 	color: #aaaa00;
 }
 
 a, a:visited, a:active {
-	text-decoration: none;
-	border-bottom: 1px solid #ffff00;
 	color: #ffff00;
 	padding-bottom: 2px;
 }
 
 h1 a, h1 a:visited, h1 a:active {
+	text-decoration: none;
 	color: #cb4b16;
 	text-shadow: 2px 2px 0px rgba(0,0,0,1);
 	border: none;
 }
 
-h1 a:hover {
+h1 a:hover{
 	background-color: #073642;
 	border-color: #073642;
 	color: #cb4b16;
@@ -43,14 +47,6 @@ h1 a:hover {
 }
 
 .post, #header, #sidebar {
-	background-color: rgba(45, 100, 114, 0.6);
+	background-color: rgba(45, 100, 114, 0.8);
 	filter:drop-shadow(4px 4px 5px green);
-}
-
-.post {
-	padding: 10px;
-	margin-bottom: 20px;
-}
-.post-content {
-	padding: 10px;
 }
