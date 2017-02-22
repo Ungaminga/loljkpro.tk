@@ -15,11 +15,11 @@ body {
 
 html, body {
 	color: #c2d8da;
-	background-color: black;
-	background-image: url(/images/bg.jpg);
+	background-color: #393939;
+	/*background-image: url(/images/bg.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center;*/
 }
 
 a:hover img{
@@ -31,6 +31,10 @@ a:hover{
 	background-color: #073642;
 	border-color: #aaaa00;
 	color: #aaaa00;
+}
+
+a[href$=".jpg"]:hover {
+	background-color: transparent;
 }
 
 a, a:visited, a:active {
@@ -110,8 +114,12 @@ acronym, abbr {
 	margin: 0 auto;
 	width: 650px;
 	text-align: center;
-	padding: 5px;
 	margin-bottom: 20px;
+}
+
+#footer p{
+	text-indent: 10px;
+	padding: 5px;
 }
 
 #sidebar {

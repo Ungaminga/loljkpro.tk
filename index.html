@@ -31,6 +31,22 @@
     <div id="content">
 
 	<article class="post">
+		<span class="meta">Feb 22, 2017</span>
+		<h1>
+		
+			<a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a>
+		
+		</h1>
+		<div class="post-content"><p>Ну че, поставил я себе <a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a>, потом жмакаю jekyll serve и он мне не генерит правильно og:url. Покопал, подебажил, и оказалось что если мы пишем jekyl serve не написав до этого JEKYLL_ENV=production, то наш любый генератор html страниц переписывает site.url. Да, об этом есть целое <a href="https://jekyllrb.com/docs/configuration/">одно место</a> в документации, хотя ссылок на Liquid, например, дофига и больше. Я этим пидорам и баг написал, и пуллкерквест выслал. Им похуй, мне похуй, всем похуй. Если кто-то ещё на эти костыли залезет - фикс выше.</p>
+
+  
+		 Теги: <a href="/tag/jekyll">jekyll</a>&nbsp;<a href="/tag/web">web</a>&nbsp;<a href="/tag/пидоры">пидоры</a>&nbsp;<a href="/tag/kiss">kiss</a>&nbsp;  </div>
+
+	</article>
+
+
+
+	<article class="post">
 		<span class="meta">Feb 19, 2017</span>
 		<h1>
 		
@@ -109,7 +125,7 @@
     </nav>
   </div>
   <footer id="footer">
-      Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>.  ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107.
+     <p> Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>.  ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107. </p>
   </footer>
 </body>
 </html>
