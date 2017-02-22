@@ -37,7 +37,9 @@
 			<a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a>
 		
 		</h1>
-		<div class="post-content"><p>Ну че, поставил я себе <a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a>, потом жмакаю jekyll serve и он мне не генерит правильно og:url. Покопал, подебажил, и оказалось что если мы пишем jekyl serve не написав до этого JEKYLL_ENV=production, то наш любый генератор html страниц переписывает site.url. Да, об этом есть целое <a href="https://jekyllrb.com/docs/configuration/">одно место</a> в документации, хотя ссылок на Liquid, например, дофига и больше. Я этим пидорам и баг написал, и пуллкерквест выслал. Им похуй, мне похуй, всем похуй. Если кто-то ещё на эти костыли залезет - фикс выше.</p>
+		<div class="post-content"><p>Ну че, поставил я себе <a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a>, потом жмакаю jekyll serve и он мне не генерит правильно og:url. Покопал, подебажил, и оказалось что если мы пишем jekyl serve не написав до этого JEKYLL_ENV=production, то наш любый генератор html страниц переписывает site.url.</p>
+
+<p>Да, об этом есть целое <a href="https://jekyllrb.com/docs/configuration/">одно место</a> в документации, хотя ссылок на Liquid, например, дофига и больше. Я этим пидорам и <a href="https://github.com/jekyll/jekyll/issues/5895">баг</a> написал, и <a href="https://github.com/Ungaminga/jekyll/commit/42ebf25666afc44a2bc6f81a0c9ffb4a13d27d84">пуллкерквест</a> выслал. Им похуй, мне похуй, всем похуй. Если кто-то ещё на эти костыли залезет - фикс выше.</p>
 
   
 		 Теги: <a href="/tag/jekyll">jekyll</a>&nbsp;<a href="/tag/web">web</a>&nbsp;<a href="/tag/пидоры">пидоры</a>&nbsp;<a href="/tag/kiss">kiss</a>&nbsp;  </div>
