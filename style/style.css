@@ -42,13 +42,13 @@ a, a:visited, a:active {
 	padding-bottom: 2px;
 }
 
-h1 a, h1 a:visited, h1 a:active {
+h1 a, h1 a:visited, h1 a:active, h2 a, h2 a:visited, h2 a:active {
 	text-decoration: none;
 	color: #cb4b16;
 	text-shadow: 2px 2px 0px rgba(0,0,0,1);
 }
 
-h1 a:hover{
+h1 a:hover, h2 a:hover{
 	background-color: #073642;
 	border-color: #073642;
 	color: #cb4b16;
@@ -102,7 +102,7 @@ acronym, abbr {
 	padding-top: 10px;
 	text-align: center;
 }
-#header h1 {
+h1 {
 	font-size: 32px;
 	font-size: 2rem;
 	text-indent: 0.7rem;
@@ -155,7 +155,7 @@ acronym, abbr {
 }
 
 /*** Posts ***/
-article h1 {
+h2 {
 	font-size: 30px;
 	margin-left: 20px;
 	text-indent: 10px;
@@ -189,7 +189,7 @@ article p {
 }
 
 /* DCSS resize images */
-article.post_num_3 img {
+article.post_num_2 img {
 	width: 32px;
 	height: auto;
 	object-fit: contain;
