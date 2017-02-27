@@ -106,7 +106,6 @@
 	Теги: <a href="/tag/games">games</a>&nbsp;<a href="/tag/dcss">dcss</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;
 	<div id="disqus_thread"></div>
 	<script>
-
 	/**
 	*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 	*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -117,6 +116,7 @@
 	};
 	*/
 	(function() { // DON'T EDIT BELOW THIS LINE
+		if (hostname == "127.0.0.1") return;
 	var d = document, s = d.createElement('script');
 	s.src = '//loljkpro-tk.disqus.com/embed.js';
 	s.setAttribute('data-timestamp', +new Date());

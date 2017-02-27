@@ -65,8 +65,8 @@ h1 a:hover, h2 a:hover{
 }
 
 .post, #header, #sidebar1, #sidebar2, #footer {
-	background-color: rgba(45, 100, 114, 0.8);
-	filter:drop-shadow(4px 4px 5px green);
+	background-color: rgba(38, 102, 93, 1);
+	box-shadow: 4px 6px 10px green;
 }
 
 code {
