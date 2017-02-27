@@ -197,6 +197,17 @@ article.post_num_2 img {
 	vertical-align: middle;
 }
 
+article.post_num_5 a+img {
+	position: absolute;
+	width: 200px;
+	margin-left: -200px;
+	margin-top: 22px;
+	display: none;
+}
+article.post_num_5 a:hover+img {
+	display: inline;
+}
+
 /*** Pagination 
 .postnavigation {
 	padding-top: 10px;
