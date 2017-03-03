@@ -11,17 +11,17 @@ body {
 	font-size: 15px;
 	font-size: 0.9rem;
 	line-height: 1.7;
-}
-
-html, body {
 	color: #c2d8da;
 	background-color: #393939;
-	/*background-image: url(/images/bg.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;*/
 }
 
+@media screen and (min-aspect-ratio: 16/10) {
+	body{
+	background: url(/images/bg.jpg) fixed bottom no-repeat;
+	background-size: 100%;
+	background-color: #D6BA94;
+	}
+}
 a:hover img{
 	background-color: yellow;
 
@@ -59,9 +59,9 @@ h1 a:hover, h2 a:hover{
 	background-color: #073642;
 	color: #93a1a1;
 	border: 1px solid #2d6472;
-    border-radius: 3px 3px 3px 3px;
-    overflow: auto;
-    padding: 6px 10px;
+	border-radius: 3px 3px 3px 3px;
+	overflow: auto;
+	padding: 6px 10px;
 }
 
 .post, #header, #sidebar1, #sidebar2, #footer {
@@ -70,16 +70,16 @@ h1 a:hover, h2 a:hover{
 }
 
 code {
-    font: 0.85em Monaco, Courier, Monospace;
+	font: 0.85em Monaco, Courier, Monospace;
 }
 
 blockquote {
-    margin: 22px 22px;
-    padding: 0 20px;
-    border-left: 2px solid #000000;
-    font-size: 1.2em;
-    font-style: italic;
-    line-height: 1.5em;
+	margin: 22px 22px;
+	padding: 0 20px;
+	border-left: 2px solid #000000;
+	font-size: 1.2em;
+	font-style: italic;
+	line-height: 1.5em;
 	border-color: #cb4b16;
 }
 
@@ -99,7 +99,7 @@ acronym, abbr {
 #header {
 	width: 650px;
 	margin: auto auto 40px auto;
-	padding-top: 10px;
+	padding: 10px 0px;
 	text-align: center;
 }
 h1 {
@@ -162,9 +162,9 @@ h2 {
 }
 
 article ul { 
-    padding: 0 0 10px 20px;
-    border: 2px dashed #c2d8da;
-    margin-bottom: 5px;
+	padding: 0 0 10px 20px;
+	border: 2px dashed #c2d8da;
+	margin-bottom: 5px;
 }
 
 article .meta {
@@ -172,7 +172,7 @@ article .meta {
 	font-size: 0.85em;
 	font-style: italic;
 	position: absolute;
-	right: 0px;
+	right: 5px;
 }
 
 article p {
@@ -211,8 +211,8 @@ article.post_num_5 a:hover+img {
 /*** Pagination 
 .postnavigation {
 	padding-top: 10px;
-    text-align: center;
-    font-size: 0.85em;
+	text-align: center;
+	font-size: 0.85em;
 }
 
 .postnavigation .left {
