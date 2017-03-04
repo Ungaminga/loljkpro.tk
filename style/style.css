@@ -15,16 +15,28 @@ body {
 	background-color: #393939;
 }
 
-@media screen and (min-aspect-ratio: 16/10) {
+@media (min-aspect-ratio: 16/10) {
 	body{
 	background: url(/images/bg.jpg) fixed bottom no-repeat;
 	background-size: 100%;
 	background-color: #D6BA94;
 	}
 }
-a:hover img{
-	background-color: yellow;
 
+@media (max-aspect-ratio: 16/10)
+{
+	body{
+	background: url(/images/bg.jpg) fixed bottom center no-repeat;
+	background-size: auto 100%;
+	background-color: #393939;
+	}
+}
+
+@media (max-aspect-ratio: 5/10)
+{
+	body{
+	background: none;
+	}
 }
 
 a:hover{
@@ -42,6 +54,11 @@ a, a:visited, a:active {
 	padding-bottom: 2px;
 }
 
+b.author-name {
+	color: orange;
+	font-weight: 900;
+	text-transform: uppercase;
+}
 h1 a, h1 a:visited, h1 a:active, h2 a, h2 a:visited, h2 a:active {
 	text-decoration: none;
 	color: #cb4b16;
