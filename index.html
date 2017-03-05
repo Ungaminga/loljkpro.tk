@@ -26,6 +26,22 @@
   <header id="header">
     <h1><a href="/"> loljkpro.tk — Твой личный интернет-хохол </a></h1>
   </header>
+   <div id="header2">
+	<script type="text/javascript">
+	if (document.cookie == "hide=true")
+		document.getElementById("header2").style.display="none";
+
+	function hide()
+	{
+		document.getElementById("header2").style.display="none";
+		document.cookie = "hide=true";
+	};
+	</script>
+
+	<p> Привет! Ты читаешь блог посвященный играм (в частности <a href="/tes-legends-начало-и-моя-колода/"> TES: Legends</a>) и технологиям. 
+	Надеюсь тебе тут понравится. При желании это оповещение можно <a onclick="hide()"> скрыть</a>. </p>
+</div> 
+  
   <div id="page">
     <div id="content">
 	<article class="post post_num_5">
@@ -149,7 +165,7 @@
     </nav>
   </div>
   <footer id="footer">
-     <p> Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>.  ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107. </p>
+     <p> Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>. ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107. </p>
   </footer>
 </body>
 </html>
