@@ -214,6 +214,11 @@ article p {
 	padding: 10px;
 }
 
+.readmore {
+	float:right; 
+	margin-top: 10px;
+}
+
 /* DCSS resize images */
 article.post_num_2 img {
 	width: 32px;
@@ -256,8 +261,23 @@ article.post_num_5 a:hover+img {
 		width: auto;
 	}
 
-	#sidebar1, #sidebar2
+	#sidebar
 	{
-		display: none;
+		position: relative;
+		width: auto;
+		right: 0;
 	}
+	#sidebar1, #siebar2 {
+		margin-bottom: 0px;
+		padding: 0px;
+	}
+	article .meta{
+		font-size: 30px;
+	}
+
+	.readmore a {
+		font-size: 40px;
+	}
+}
+
 }
