@@ -248,3 +248,16 @@ article.post_num_5 a:hover+img {
 .postnavigation .right {
 	float: right;
 }***/
+
+@media all and (orientation: portrait), all and (max-width: 480px) { 
+	#page, #header, #header2, #footer
+	{
+		margin: 30px;
+		width: auto;
+	}
+
+	#sidebar1, #sidebar2
+	{
+		display: none;
+	}
+}
