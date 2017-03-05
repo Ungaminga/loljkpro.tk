@@ -249,7 +249,7 @@ article.post_num_5 a:hover+img {
 	float: right;
 }***/
 
-@media all and (orientation: portrait), all and (max-width: 480px) { 
+@media all and (orientation: portrait) { 
 	#page, #header, #header2, #footer
 	{
 		margin: 30px;
