@@ -198,7 +198,11 @@ article ul {
 	border: 2px dashed #c2d8da;
 	margin-bottom: 5px;
 }
-
+article ul > li > ul {
+	list-style-type:none;
+	padding: 2px 0 10px 10px;
+	margin-top: 2px;
+}
 article .meta {
 	padding-top: 6px;
 	font-size: 0.85em;
@@ -223,6 +227,11 @@ article p {
 .readmore {
 	float:right; 
 	margin-top: 10px;
+}
+
+a.tes_l_image_link{
+	text-decoration: none;
+	color: #c2d8da;
 }
 
 /* DCSS resize images */
