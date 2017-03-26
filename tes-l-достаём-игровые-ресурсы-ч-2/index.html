@@ -55,7 +55,7 @@
 			<li> <a href="/tes-legends-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D0%B8-%D0%BC%D0%BE%D1%8F-%D0%BA%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0/">TES: Legend — начало и моя колода</a></li>
 			<li> <a href="/linux-tor-%D0%B8-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%BD%D0%B0-webkit/">Linux: Tor и браузеры на Webkit</a></li>
 			</ul>
-			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/5 | 0;</script>
+			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/3.5 | 0;</script>
 		</div>
 		<div class="tagcloud">
 			<div style="margin: 0px 0px -10px 10px; text-align: left"> Облако тегов: </div>
@@ -93,24 +93,9 @@
 <figure class="highlight"><pre><code class="language-text" data-lang="text"> %USERPROFILE%\AppData\LocalLow\Unity\WebPlayer\Cache\Dire Wolf Digital_The Elder Scrolls_ Legends</code></pre></figure>
 <p>В папках со случайными именами лежат __data-файлы, которые и являются нужными нам бандлами. Открываем их с помощью <a href="https://github.com/Ungaminga/UnityStudio">Unity Studio</a>:</p>
 
-<script>
-function showhide(ele)
-{
-	const hide = 'Скрыть:<img id="guide" src="/images/guide.gif" style="display: inline;">';
-	if (ele.innerHTML == hide)
-	{
-		ele.innerHTML = "Показать guide.gif";
-		document.getElementById("guide").style.display="none";
-	}
-	else 
-	{
-		ele.innerHTML = hide;
-		document.getElementById("guide").style.display="inline";
-	}
-}
-</script>
+<script>function sh(ele){const hide='Скрыть:<img src="/images/guide.gif">'; ele.innerHTML=ele.innerHTML==hide?"Показать guide.gif":hide;}</script>
 
-<p><a onclick="showhide(this)">Скрыть:<img id="guide" src="/images/guide.gif" style="display: inline;" /></a></p>
+<p><a onclick="{sh(this)}">Скрыть:<img src="/images/guide.gif" /></a></p>
 
 <p>Ещё с помощью <a href="https://rutracker.org/forum/viewtopic.php?t=5327915">Navicat</a> можно достать текстовую локализацию из</p>
 <figure class="highlight"><pre><code class="language-text" data-lang="text">%USERPROFILE%\AppData\LocalLow\Dire Wolf Digital\The Elder Scrolls_ Legends</code></pre></figure>

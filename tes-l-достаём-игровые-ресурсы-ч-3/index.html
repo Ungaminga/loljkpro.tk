@@ -55,7 +55,7 @@
 			<li> <a href="/tes-legends-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D0%B8-%D0%BC%D0%BE%D1%8F-%D0%BA%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0/">TES: Legend — начало и моя колода</a></li>
 			<li> <a href="/linux-tor-%D0%B8-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%BD%D0%B0-webkit/">Linux: Tor и браузеры на Webkit</a></li>
 			</ul>
-			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/5 | 0;</script>
+			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/3.5 | 0;</script>
 		</div>
 		<div class="tagcloud">
 			<div style="margin: 0px 0px -10px 10px; text-align: left"> Облако тегов: </div>
@@ -94,6 +94,10 @@
 Это исключительная утилита, которая позволяет смотреть, редактировать и встраивать в .net/C# библиотеки код. Обладает некоторой способностью в борьбе с обфускацией, на данный момент практически единственная утилита имеющая подобный функционал. Можно конечно пользоваться <a href="http://www.red-gate.com/products/dotnet-development/reflector/">.NET Reflector</a>, но он вроде-бы платный или ещё с ним какие-то бока. Я пока остановился на dnSpy. Следует заметить, около 90% программы локализовано под русский язык.</p>
 
 <p>Все довольно просто, перетаскиваем в левое окно нужные нам библиотеки или открываем их с помощью меню “Открыть”<code class="highlighter-rouge">(ctrl+o)</code>. Используя опцию контекстного меню “Редактировать метод” можно редактировать код, после этого скомпилировать его и сохранить <code class="highlighter-rouge">(ctrl+shift+s)</code> в виде .net библиотеки, которую именно мы открыли.</p>
+
+<script>function sh(ele){const hide='Скрыть:<img src="/images/guide2.gif">'; ele.innerHTML=ele.innerHTML==hide?"Показать guide2.gif":hide;}</script>
+
+<p><a onclick="{sh(this)}">Скрыть:<img src="/images/guide2.gif" /></a></p>
 
 <p>Кстати, в случае работы с unity нам прийдется каждый раз перезапускать игру. Так-же отладчик dnSpy <a href="https://github.com/0xd4d/dnSpy/issues/393">пока не поддерживает</a> подсоеденение к юнити приложению.</p>
 
