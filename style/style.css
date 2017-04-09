@@ -79,7 +79,7 @@ p > code{
 	color: greenyellow ;
 }
 
-.post, #header, #header2, #sidebar1, #sidebar2, #footer {
+.post, #header, #header2, #sidebar1, #sidebar2, #footer, .postnavigation{
 	background-color: rgba(38, 102, 93, 1);
 	box-shadow: 4px 6px 10px green;
 }
@@ -267,11 +267,12 @@ article.post_num_6 a:hover+img {
 	opacity: 1;
 }
 
-/*** Pagination 
+/*** Pagination ***/
 .postnavigation {
-	padding-top: 10px;
+	margin-top: -5px;
 	text-align: center;
-	font-size: 0.85em;
+	box-shadow: 4px -2.5px 10px green;
+	padding: 0px 15px;
 }
 
 .postnavigation .left {
@@ -280,7 +281,7 @@ article.post_num_6 a:hover+img {
 
 .postnavigation .right {
 	float: right;
-}***/
+}
 
 @media all and (orientation: portrait) { 
 	#page, #header, #header2, #footer
