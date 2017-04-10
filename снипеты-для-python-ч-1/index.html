@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+<meta charset="UTF-8">
+<title>  Снипеты для Python, ч. 1 | loljkpro.tk
+           </title>
+<!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Снипеты для Python, ч. 1" />
+<meta name="description" content="Питон (вам на работе могут сказать, что его надо называть пАЙтон) – простой и удобный язык, особенно если его надо использовать в качестве скриптов-однофайловиков для различных решений. Хотя я на нём даже генераторы галерей пишу. К примеру, мне надо было обновить id в cards.json, т.к. товарищ @MarioZG использовал сгенерированные с помощью MD5 функций GUID’ы, которые имеют мало общего с реальностью new Guid(((HashAlgorithm) CryptoConfig.CreateFromName(&quot;MD5&quot;)).ComputeHash(System.Text.Encoding.UTF8.GetBytes(c.name.ToLower()))) Поменять я это смог в 3 шага:" />
+<meta property="og:description" content="Питон (вам на работе могут сказать, что его надо называть пАЙтон) – простой и удобный язык, особенно если его надо использовать в качестве скриптов-однофайловиков для различных решений. Хотя я на нём даже генераторы галерей пишу. К примеру, мне надо было обновить id в cards.json, т.к. товарищ @MarioZG использовал сгенерированные с помощью MD5 функций GUID’ы, которые имеют мало общего с реальностью new Guid(((HashAlgorithm) CryptoConfig.CreateFromName(&quot;MD5&quot;)).ComputeHash(System.Text.Encoding.UTF8.GetBytes(c.name.ToLower()))) Поменять я это смог в 3 шага:" />
+<link rel="canonical" href="http://loljkpro.tk//%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/" />
+<meta property="og:url" content="http://loljkpro.tk//%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/" />
+<meta property="og:site_name" content="loljkpro.tk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-04-10T00:00:00+03:00" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Снипеты для Python, ч. 1",
+"datePublished": "2017-04-10T00:00:00+03:00",
+"description": "Питон (вам на работе могут сказать, что его надо называть пАЙтон) – простой и удобный язык, особенно если его надо использовать в качестве скриптов-однофайловиков для различных решений. Хотя я на нём даже генераторы галерей пишу. К примеру, мне надо было обновить id в cards.json, т.к. товарищ @MarioZG использовал сгенерированные с помощью MD5 функций GUID’ы, которые имеют мало общего с реальностью new Guid(((HashAlgorithm) CryptoConfig.CreateFromName(&quot;MD5&quot;)).ComputeHash(System.Text.Encoding.UTF8.GetBytes(c.name.ToLower()))) Поменять я это смог в 3 шага:",
+"url": "http://loljkpro.tk//%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="/style/style.css" rel="stylesheet" />
+<link href="/style/style_highlight.css" rel="stylesheet" />
+<script async src="/scripts/analytics.js"></script>
+</head> 
+<body>
+  <header id="header">
+    <h1><a href="/"> loljkpro.tk — Твой личный интернет-хохол </a></h1>
+  </header>
+  
+  <div id="page">
+    <nav id="sidebar">
+      <div id="sidebar1">
+        <details> <summary>Обо мне </summary> Мне 25 лет, я живу в Киеве, <br>увлекаюсь <a href="https://steamcommunity.com/profiles/76561198112629280">видеоиграми</a>, музыкой и <a href=https://github.com/Ungaminga>программированием</a>. <br> Можете <a href="mailto:loljkpro@cock.li">написать мне</a> по поводу работы.</details>
+        <details> <summary>Написать мне </summary> <a href="mailto:loljkpro@cock.li">Почта</a>, <a href="xmpp:richmond@leechcraft.org">Жабер</a> </details>
+        <a href = "https://ungaminga.github.io/TES-L-Card-Images-Gallery/">Галерея изображений</a> и <a href = "https://ungaminga.github.io/TES-L-Localizated-Sounds-Gallery/"> звуков</a> из <acronym title="The Elder Scrolls: Legends">TES:L</acronym>.
+        Новые <a href = "https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">релизы</a> моего трекера для TES:L.<br>
+        <script type="text/javascript">
+	var stream_name = "loljkpro";
+	var url = "https://api.twitch.tv/kraken/streams/"+stream_name+"?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm";
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	xhr.responseType = 'json';
+	
+	xhr.onload = function() {
+	if (xhr.status == 200 && xhr.response["stream"] != null)
+	{
+		var span = document.createElement('span');
+		span.innerHTML = "Я <a href='https://www.twitch.tv/"+stream_name+"'>транслирую</a> " + xhr.response["stream"]["game"];
+		document.getElementById("sidebar1").appendChild(span);
+	}};
+	
+	xhr.send();
+</script>
+      </div>
+    <aside id="sidebar2"> 
+		<div style="margin-bottom: 5px" class="posts_list">
+			<div style="margin: 0px 0px 5px 10px; text-align: left">
+				Посты: 
+			</div>
+			<ul>
+			<li> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/">Снипеты для Python, ч. 2</a></li>
+			<li> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/">Снипеты для Python, ч. 1</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-4/">TES-L: достаём игровые ресурсы, ч. 4</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-3/">TES-L: достаём игровые ресурсы, ч. 3</a></li>
+			<li> <a href="/%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7-tes-legends/">Официальный релиз TES: Legends</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-2/">TES-L: достаём игровые ресурсы, ч. 2</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B/">TES-L: достаём игровые ресурсы</a></li>
+			<li> <a href="/tes-legends-%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D0%B5-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE/">TES: Legends: Легендарное начало</a></li>
+			<li> <a href="/%D1%84%D0%B8%D1%88%D0%BA%D0%B8-sublime-text/">Фишки Sublime Text</a></li>
+			<li> <a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a></li>
+			<li> <a href="/dcss-demigod-ice-elementalist/">DCSS: Demigod Ice Elementalist</a></li>
+			<li> <a href="/tes-legends-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D0%B8-%D0%BC%D0%BE%D1%8F-%D0%BA%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0/">TES: Legend — начало и моя колода</a></li>
+			<li> <a href="/linux-tor-%D0%B8-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%BD%D0%B0-webkit/">Linux: Tor и браузеры на Webkit</a></li>
+			</ul>
+			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/3.5 | 0;</script>
+		</div>
+		<div class="tagcloud">
+			<div style="margin: 0px 0px -10px 10px; text-align: left"> Облако тегов: </div>
+				<a style="font-size: 80%; color: yellow;" href="/tag/.net" title="2">.net</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/c#" title="2">c#</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/dcss" title="1">dcss</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/dnSpy" title="2">dnSpy</a>
+				<a style="font-size: 200%; color: yellow;" href="/tag/games" title="8">games</a>
+				<a style="font-size: 160%; color: yellow;" href="/tag/guide" title="6">guide</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/hack" title="2">hack</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/hacking" title="2">hacking</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/jekyll" title="1">jekyll</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/kiss" title="1">kiss</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/linux" title="1">linux</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/python" title="2">python</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/snippet" title="2">snippet</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/sublime" title="1">sublime</a>
+				<a style="font-size: 180%; color: yellow;" href="/tag/tes_legends" title="7">tes_legends</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/tor" title="1">tor</a>
+				<a style="font-size: 120%; color: yellow;" href="/tag/unity" title="4">unity</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/web" title="1">web</a>
+				
+		</div>
+ </aside>
+    </nav>
+
+    <div id="content"><article class="post post_num_11">
+	<span class="meta">Apr 10, 2017</span>
+	<h2>
+	
+		<a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/">Снипеты для Python, ч. 1</a>
+	
+	</h2>
+	<div class="post-content"><style type="text/css">
+.post_num_11 ol>li:nth-child(2)>div.highlighter-rouge:nth-child(2),
+.post_num_11 ol>li:nth-child(3)>div.highlighter-rouge{
+	margin-top: 10px;
+}
+</style>
+
+<p>Питон (вам на работе могут сказать, что его надо называть пАЙтон) – простой и удобный язык, особенно если его надо использовать в качестве скриптов-однофайловиков для различных решений. Хотя я на нём даже <a href="https://github.com/Ungaminga/sound_gallery">генераторы галерей</a> <a href="https://github.com/Ungaminga/gallery">пишу</a>. К примеру, мне надо было обновить <code class="highlighter-rouge">id</code> в <a href="https://github.com/MarioZG/elder-scrolls-legends-tracker/pull/11/commits/0fe722d1c6bae65006bef4943bfbe4cee48a4866">cards.json</a>, т.к. товарищ @MarioZG использовал сгенерированные с помощью MD5 функций GUID’ы, которые имеют мало общего с реальностью</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">new</span> <span class="nf">Guid</span><span class="p">(((</span><span class="n">HashAlgorithm</span><span class="p">)</span> <span class="n">CryptoConfig</span><span class="p">.</span><span class="nf">CreateFromName</span><span class="p">(</span><span class="s">"MD5"</span><span class="p">)).</span><span class="nf">ComputeHash</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">name</span><span class="p">.</span><span class="nf">ToLower</span><span class="p">())))</span></code></pre></figure>
+
+<p>Поменять я это смог в 3 шага:</p>
+
+<ol>
+  <li>Меняем язык игры в <code class="highlighter-rouge">Betheda.net Launcher</code> на английский.</li>
+  <li>С помощью <a href="https://rutracker.org/forum/viewtopic.php?t=5327915">Navicat</a> достаём текстовую локализацию из
+    <div class="highlighter-rouge"><pre class="highlight"><code>%USERPROFILE%\AppData\LocalLow\Dire Wolf Digital\The Elder Scrolls_ Legends
+</code></pre>
+    </div>
+    <p>создав SQL запрос</p>
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="nv">"replace"</span><span class="p">(</span><span class="n">Lookup</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="nv">"-title"</span><span class="p">,</span><span class="nv">""</span><span class="p">)</span> <span class="k">as</span> <span class="nv">"id"</span><span class="p">,</span> <span class="nv">"value"</span> <span class="k">as</span> <span class="nv">"name"</span>
+<span class="k">FROM</span> <span class="n">Lookup</span>
+<span class="k">WHERE</span> <span class="nv">"key"</span> <span class="k">LIKE</span> <span class="nv">"%-title"</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+<span class="n">Lookup</span><span class="p">.</span><span class="n">value</span> <span class="k">ASC</span>
+</code></pre>
+    </div>
+  </li>
+  <li>И питоном поменяем айдишники
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="n">cards</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">"cards.json"</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">)</span>
+<span class="n">lookup</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">"Lookup.json"</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">])):</span>
+ <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">[</span><span class="s">"RECORDS"</span><span class="p">]:</span>
+     <span class="k">if</span> <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">j</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+         <span class="k">print</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"id"</span><span class="p">],</span> <span class="n">j</span><span class="p">[</span><span class="s">"id"</span><span class="p">],</span> <span class="n">j</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span> <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"name"</span><span class="p">])</span>
+         <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span>
+<span class="nb">open</span><span class="p">(</span><span class="s">"output.json"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">cards</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+</code></pre>
+    </div>
+    <p>К тому-же у меня окончательный вариант скрипта добавляет тип действия, который используется в <a href="https://github.com/Ungaminga/elder-scrolls-legends-tracker">трекере</a> для <a href="https://github.com/Ungaminga/elder-scrolls-legends-tracker/commit/d8984b6f9ce3776e839ffdb4d4787d581cd5a97a">расчета шанса срабатывания</a>, к примеру пророчества:</p>
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="n">cards</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">"cards.json"</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">)</span>
+<span class="n">lookup</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">"Lookup.json"</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">)</span>
+<span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">"triggertype"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"action_draw"</span> <span class="c"># Abecean Navigator</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">])):</span>
+ <span class="k">if</span> <span class="s">"Prophecy"</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"text"</span><span class="p">]:</span>
+     <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"triggertype"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"prophecy"</span>
+ <span class="k">elif</span> <span class="s">"Ally"</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"name"</span><span class="p">]:</span>
+     <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"triggertype"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"ally"</span>
+ <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">[</span><span class="s">"RECORDS"</span><span class="p">]:</span>
+     <span class="k">if</span> <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">j</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+         <span class="k">print</span><span class="p">(</span><span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"id"</span><span class="p">],</span> <span class="n">j</span><span class="p">[</span><span class="s">"id"</span><span class="p">],</span> <span class="n">j</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span> <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"name"</span><span class="p">])</span>
+         <span class="n">cards</span><span class="p">[</span><span class="s">"Cards"</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span>
+<span class="nb">open</span><span class="p">(</span><span class="s">"output.json"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">cards</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+</code></pre>
+    </div>
+    <p>Чтобы у нас не сбивалась сортировка JSON’а надо использовать <code class="highlighter-rouge">OrderedDict</code>. Читайте так-же <a href="/снипеты-для-python-ч-2/">следующую часть</a>!</p>
+  </li>
+</ol>
+
+
+	</div>
+	Теги: <a href="/tag/snippet">snippet</a>&nbsp;<a href="/tag/python">python</a>&nbsp;
+	<!-- begin wwww.htmlcommentbox.com -->
+	<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+	<link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+	<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24XEbEQPXdMgCr2bUB7Jzs40"+"&opts=16734&num=10&ts=1488638459521");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+	<!-- end www.htmlcommentbox.com -->
+</article>
+
+</div>
+  </div>
+  <footer id="footer">
+     <p> Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>. ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107. </p>
+  </footer>
+</body>
+</html>

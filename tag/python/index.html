@@ -2,21 +2,21 @@
 <html lang="ru"> 
 <head>
 <meta charset="UTF-8">
-<title>  loljkpro.tk > dcss
+<title>  loljkpro.tk > python
            </title>
 <!-- Begin Jekyll SEO tag v2.1.0 -->
 <meta property="og:title" content="loljkpro.tk" />
 <meta name="description" content="Твой личный интернет-хохол" />
 <meta property="og:description" content="Твой личный интернет-хохол" />
-<link rel="canonical" href="http://loljkpro.tk//tag/dcss/" />
-<meta property="og:url" content="http://loljkpro.tk//tag/dcss/" />
+<link rel="canonical" href="http://loljkpro.tk//tag/python/" />
+<meta property="og:url" content="http://loljkpro.tk//tag/python/" />
 <meta property="og:site_name" content="loljkpro.tk" />
 <script type="application/ld+json">
 {"@context": "http://schema.org",
 "@type": "WebPage",
 "headline": "loljkpro.tk",
 "description": "Твой личный интернет-хохол",
-"url": "http://loljkpro.tk//tag/dcss/"}</script>
+"url": "http://loljkpro.tk//tag/python/"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="/style/style.css" rel="stylesheet" />
@@ -101,28 +101,42 @@
     </nav>
 
     <div id="content">
-	<article class="post post_num_2">
-		<span class="meta">Feb 19, 2017</span>
+	<article class="post post_num_12">
+		<span class="meta">Apr 10, 2017</span>
 		<h2>
 		
-			<a href="/dcss-demigod-ice-elementalist/">DCSS: Demigod Ice Elementalist</a>
+			<a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/">Снипеты для Python, ч. 2</a>
 		
 		</h2>
-		<div class="tagspage_tags"> Теги: <a href="/tag/games">games</a>&nbsp;<a href="/tag/dcss">dcss</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;</div>
-		<div class="post-content"><p>Заранее скажу, что реализация этого персонажа крайне сложна и очень зависит от удачи; а ещё этот гайд для 0.18.1 по причине <a href="http://crawl.chaosforge.org/Lair#History">уменьшенного Lair</a> в последующих патчах и <a href="http://crawl.chaosforge.org/Deck#History">наличия колод карт</a> в 0.18.1. Мы будем раскачивать этого персонажа как гибрида, но все будет зависеть от предметов и книг, которые нам выпадут.<br />
-Поехали:</p>
+		<div class="tagspage_tags"> Теги: <a href="/tag/snippet">snippet</a>&nbsp;<a href="/tag/python">python</a>&nbsp;</div>
+		<div class="post-content"><p>Мне жизнь как-то показала интересную задачу: надо сделать сортировку в определенном порядке, причем остальные элементы идут за указанными в списке. Конечно, кто-то может на лямбдах написать лучше, но я ведь даже книжки по питону не читал. Решение простое:</p>
 
-<p>1. <a href="http://crawl.chaosforge.org/Book_of_Frost"><img src="http://crawl.chaosforge.org/images/0/0d/Spellbook.png" alt="DCSS Book" /></a><a href="http://crawl.chaosforge.org/Book_of_Frost">Book of Frost</a> (В скобках бинд, который я обычно использую):</p>
+  <div align="right"> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/"> Читать далее </a> </div></div>
+		
+	</article>
 
-<ul>
-  <li>a – <a href="http://crawl.chaosforge.org/Freeze" title="This spell freezes a creature. This may temporarily slow the metabolism of a cold-blooded creature."><img src="http://crawl.chaosforge.org/images/0/00/Freeze.png" alt="Freeze_Img" /></a><a href="http://crawl.chaosforge.org/Freeze" title="This spell freezes a creature. This may temporarily slow the metabolism of a cold-blooded creature.">Freeze</a>: Базовое заклинание, которое мы будем жмакать всю начальную игру.</li>
-  <li>b – <a href="http://crawl.chaosforge.org/Throw_Frost" title="This spell throws a small puff of frost."><img src="http://crawl.chaosforge.org/images/3/3b/Throw_frost.png" alt="Throw Frost_Img" /></a><a href="http://crawl.chaosforge.org/Throw_Frost" title="This spell throws a small puff of frost.">Throw Frost</a>: В этом гайде нам оно будет нужно чтобы не просесть в начальной игре. Так само по себе довольно бесполезное. Вкачиваем на уровне 2, докачиваем <a href="http://crawl.chaosforge.org/Conjurations">Conjurations</a> до 1.</li>
-  <li>с(z) – <a href="http://crawl.chaosforge.org/Ozocubu%27s_Armour" title="Envelops the caster's body in a protective layer of ice. The caster will not suffer cold from this layer, yet can be affected by other sources of cold normally. The spell will not function for casters already wearing heavy armour (any body armour with an encumbrance rating of 5 or more)."><img src="http://crawl.chaosforge.org/images/9/9c/Ozocubu%27s_armour.png" alt="Ozocubu's Armour_Img" /></a><a href="http://crawl.chaosforge.org/Ozocubu%27s_Armour" title="Envelops the caster's body in a protective layer of ice. The caster will not suffer cold from this layer, yet can be affected by other sources of cold normally. The spell will not function for casters already wearing heavy armour (any body armour with an encumbrance rating of 5 or more).">Ozocubu’s Armour</a>: Важнейшее заклинание для защиты. При возможности активируем на верхнем уровне, регенерируем ману и идем по лестнице. Вкачиваем на уровне 3, прокачиваем <a href="http://crawl.chaosforge.org/Charms">Charms</a> до 1.</li>
-  <li>d(f) – <a href="http://crawl.chaosforge.org/Throw_Icicle" title="This spell throws forth a shard of ice. It affects even cold-resistant creatures somewhat, due to its strong impact and cutting edges."><img src="http://crawl.chaosforge.org/images/f/f2/Throw_icicle.png" alt="Throw Icicle_Img" /></a><a href="http://crawl.chaosforge.org/Throw_Icicle" title="This spell throws forth a shard of ice. It affects even cold-resistant creatures somewhat, due to its strong impact and cutting edges.">Throw Icicle</a>: Сильный нюк, можно убивать гидр. Будет вам служить весь мидгейм. Прокачиваем на уровне 9.</li>
-  <li>e(s) – <a href="http://crawl.chaosforge.org/Summon_Ice_Beast" title="Calls forth a beast of ice to serve the caster."><img src="http://crawl.chaosforge.org/images/8/89/Summon_ice_beast.png" alt="Summon Ice Beast_Img" /></a><a href="http://crawl.chaosforge.org/Summon_Ice_Beast" title="Calls forth a beast of ice to serve the caster.">Summon Ice Beast</a>: Пожалуй, самое важное заклинание нашего персонажа. Прокачиваем на 6м уровне, после этого докачиваем <a href="http://crawl.chaosforge.org/Summoning">Summoning</a> до 6.</li>
-</ul>
+	<article class="post post_num_11">
+		<span class="meta">Apr 10, 2017</span>
+		<h2>
+		
+			<a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/">Снипеты для Python, ч. 1</a>
+		
+		</h2>
+		<div class="tagspage_tags"> Теги: <a href="/tag/snippet">snippet</a>&nbsp;<a href="/tag/python">python</a>&nbsp;</div>
+		<div class="post-content"><style type="text/css">
+.post_num_11 ol>li:nth-child(2)>div.highlighter-rouge:nth-child(2),
+.post_num_11 ol>li:nth-child(3)>div.highlighter-rouge{
+	margin-top: 10px;
+}
+</style>
 
-  <div align="right"> <a href="/dcss-demigod-ice-elementalist/"> Читать далее </a> </div></div>
+<p>Питон (вам на работе могут сказать, что его надо называть пАЙтон) – простой и удобный язык, особенно если его надо использовать в качестве скриптов-однофайловиков для различных решений. Хотя я на нём даже <a href="https://github.com/Ungaminga/sound_gallery">генераторы галерей</a> <a href="https://github.com/Ungaminga/gallery">пишу</a>. К примеру, мне надо было обновить <code class="highlighter-rouge">id</code> в <a href="https://github.com/MarioZG/elder-scrolls-legends-tracker/pull/11/commits/0fe722d1c6bae65006bef4943bfbe4cee48a4866">cards.json</a>, т.к. товарищ @MarioZG использовал сгенерированные с помощью MD5 функций GUID’ы, которые имеют мало общего с реальностью</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">new</span> <span class="nf">Guid</span><span class="p">(((</span><span class="n">HashAlgorithm</span><span class="p">)</span> <span class="n">CryptoConfig</span><span class="p">.</span><span class="nf">CreateFromName</span><span class="p">(</span><span class="s">"MD5"</span><span class="p">)).</span><span class="nf">ComputeHash</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="nf">GetBytes</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">name</span><span class="p">.</span><span class="nf">ToLower</span><span class="p">())))</span></code></pre></figure>
+
+<p>Поменять я это смог в 3 шага:</p>
+
+  <div align="right"> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/"> Читать далее </a> </div></div>
 		
 	</article>
 

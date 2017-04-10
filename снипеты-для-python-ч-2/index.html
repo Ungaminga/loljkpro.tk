@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+<meta charset="UTF-8">
+<title>  Снипеты для Python, ч. 2 | loljkpro.tk
+           </title>
+<!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Снипеты для Python, ч. 2" />
+<meta name="description" content="Мне жизнь как-то показала интересную задачу: надо сделать сортировку в определенном порядке, причем остальные элементы идут за указанными в списке. Конечно, кто-то может на лямбдах написать лучше, но я ведь даже книжки по питону не читал. Решение простое:" />
+<meta property="og:description" content="Мне жизнь как-то показала интересную задачу: надо сделать сортировку в определенном порядке, причем остальные элементы идут за указанными в списке. Конечно, кто-то может на лямбдах написать лучше, но я ведь даже книжки по питону не читал. Решение простое:" />
+<link rel="canonical" href="http://loljkpro.tk//%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/" />
+<meta property="og:url" content="http://loljkpro.tk//%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/" />
+<meta property="og:site_name" content="loljkpro.tk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-04-10T00:00:00+03:00" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Снипеты для Python, ч. 2",
+"datePublished": "2017-04-10T00:00:00+03:00",
+"description": "Мне жизнь как-то показала интересную задачу: надо сделать сортировку в определенном порядке, причем остальные элементы идут за указанными в списке. Конечно, кто-то может на лямбдах написать лучше, но я ведь даже книжки по питону не читал. Решение простое:",
+"url": "http://loljkpro.tk//%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="/style/style.css" rel="stylesheet" />
+<link href="/style/style_highlight.css" rel="stylesheet" />
+<script async src="/scripts/analytics.js"></script>
+</head> 
+<body>
+  <header id="header">
+    <h1><a href="/"> loljkpro.tk — Твой личный интернет-хохол </a></h1>
+  </header>
+  
+  <div id="page">
+    <nav id="sidebar">
+      <div id="sidebar1">
+        <details> <summary>Обо мне </summary> Мне 25 лет, я живу в Киеве, <br>увлекаюсь <a href="https://steamcommunity.com/profiles/76561198112629280">видеоиграми</a>, музыкой и <a href=https://github.com/Ungaminga>программированием</a>. <br> Можете <a href="mailto:loljkpro@cock.li">написать мне</a> по поводу работы.</details>
+        <details> <summary>Написать мне </summary> <a href="mailto:loljkpro@cock.li">Почта</a>, <a href="xmpp:richmond@leechcraft.org">Жабер</a> </details>
+        <a href = "https://ungaminga.github.io/TES-L-Card-Images-Gallery/">Галерея изображений</a> и <a href = "https://ungaminga.github.io/TES-L-Localizated-Sounds-Gallery/"> звуков</a> из <acronym title="The Elder Scrolls: Legends">TES:L</acronym>.
+        Новые <a href = "https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">релизы</a> моего трекера для TES:L.<br>
+        <script type="text/javascript">
+	var stream_name = "loljkpro";
+	var url = "https://api.twitch.tv/kraken/streams/"+stream_name+"?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm";
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	xhr.responseType = 'json';
+	
+	xhr.onload = function() {
+	if (xhr.status == 200 && xhr.response["stream"] != null)
+	{
+		var span = document.createElement('span');
+		span.innerHTML = "Я <a href='https://www.twitch.tv/"+stream_name+"'>транслирую</a> " + xhr.response["stream"]["game"];
+		document.getElementById("sidebar1").appendChild(span);
+	}};
+	
+	xhr.send();
+</script>
+      </div>
+    <aside id="sidebar2"> 
+		<div style="margin-bottom: 5px" class="posts_list">
+			<div style="margin: 0px 0px 5px 10px; text-align: left">
+				Посты: 
+			</div>
+			<ul>
+			<li> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/">Снипеты для Python, ч. 2</a></li>
+			<li> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/">Снипеты для Python, ч. 1</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-4/">TES-L: достаём игровые ресурсы, ч. 4</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-3/">TES-L: достаём игровые ресурсы, ч. 3</a></li>
+			<li> <a href="/%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7-tes-legends/">Официальный релиз TES: Legends</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-2/">TES-L: достаём игровые ресурсы, ч. 2</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B/">TES-L: достаём игровые ресурсы</a></li>
+			<li> <a href="/tes-legends-%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D0%B5-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE/">TES: Legends: Легендарное начало</a></li>
+			<li> <a href="/%D1%84%D0%B8%D1%88%D0%BA%D0%B8-sublime-text/">Фишки Sublime Text</a></li>
+			<li> <a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a></li>
+			<li> <a href="/dcss-demigod-ice-elementalist/">DCSS: Demigod Ice Elementalist</a></li>
+			<li> <a href="/tes-legends-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D0%B8-%D0%BC%D0%BE%D1%8F-%D0%BA%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0/">TES: Legend — начало и моя колода</a></li>
+			<li> <a href="/linux-tor-%D0%B8-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%BD%D0%B0-webkit/">Linux: Tor и браузеры на Webkit</a></li>
+			</ul>
+			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/3.5 | 0;</script>
+		</div>
+		<div class="tagcloud">
+			<div style="margin: 0px 0px -10px 10px; text-align: left"> Облако тегов: </div>
+				<a style="font-size: 80%; color: yellow;" href="/tag/.net" title="2">.net</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/c#" title="2">c#</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/dcss" title="1">dcss</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/dnSpy" title="2">dnSpy</a>
+				<a style="font-size: 200%; color: yellow;" href="/tag/games" title="8">games</a>
+				<a style="font-size: 160%; color: yellow;" href="/tag/guide" title="6">guide</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/hack" title="2">hack</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/hacking" title="2">hacking</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/jekyll" title="1">jekyll</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/kiss" title="1">kiss</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/linux" title="1">linux</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/python" title="2">python</a>
+				<a style="font-size: 80%; color: yellow;" href="/tag/snippet" title="2">snippet</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/sublime" title="1">sublime</a>
+				<a style="font-size: 180%; color: yellow;" href="/tag/tes_legends" title="7">tes_legends</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/tor" title="1">tor</a>
+				<a style="font-size: 120%; color: yellow;" href="/tag/unity" title="4">unity</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/web" title="1">web</a>
+				
+		</div>
+ </aside>
+    </nav>
+
+    <div id="content"><article class="post post_num_12">
+	<span class="meta">Apr 10, 2017</span>
+	<h2>
+	
+		<a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/">Снипеты для Python, ч. 2</a>
+	
+	</h2>
+	<div class="post-content"><p>Мне жизнь как-то показала интересную задачу: надо сделать сортировку в определенном порядке, причем остальные элементы идут за указанными в списке. Конечно, кто-то может на лямбдах написать лучше, но я ведь даже книжки по питону не читал. Решение простое:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">custom_sort</span> <span class="p">(</span><span class="n">to_sort</span><span class="p">):</span>
+  <span class="n">list1</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">to_sort</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">sorting_order</span><span class="p">:</span>
+      <span class="n">list1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+
+  <span class="n">list1</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span><span class="n">sorting_order</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+  <span class="n">list2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+  <span class="k">return</span> <span class="n">list1</span><span class="o">+</span><span class="n">list2</span>
+
+<span class="n">sorting_order</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s">"ru_cards_sound"</span><span class="p">,</span>
+  <span class="s">"ru_portrait_shout"</span><span class="p">,</span>
+  <span class="s">"en_cards_sound"</span><span class="p">,</span>
+  <span class="s">"en_portrait_shout"</span><span class="p">,</span>
+  <span class="s">"card_nonloc"</span><span class="p">,</span>
+  <span class="s">"ambience"</span><span class="p">,</span>
+  <span class="s">"ui"</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Либо надо было посортировать звуки по папочкам:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">shutil</span>
+
+<span class="k">def</span> <span class="nf">process_exceptions</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'deshaan_avenger_deshaan_sneak'</span><span class="p">,</span> <span class="n">F</span><span class="p">)):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s">'deshaan_avenger'</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s">'deshaan_sneak'</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'deshaan_avenger'</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'_deshaan_sneak'</span><span class="p">,</span> <span class="s">''</span><span class="p">)))</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'deshaan_sneak'</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'deshaan_avenger_'</span><span class="p">,</span> <span class="s">''</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="bp">True</span>
+  <span class="k">return</span> <span class="bp">False</span>
+
+<span class="c"># load directory name</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+  <span class="nb">dir</span> <span class="o">=</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">F</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="nb">dir</span><span class="p">):</span>
+  <span class="n">s</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'.wav'</span><span class="p">,</span> <span class="n">F</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">s</span><span class="p">:</span>
+    <span class="c"># deshaan_avenger_deshaan_sneak is exception of main rule of names</span>
+    <span class="k">if</span> <span class="n">process_exceptions</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="c"># taking name left of.wav or _(some names extansion)          and exclude .wav from filename  </span>
+    <span class="n">subdir</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">r'(.wav|(_(attack.*|enter_play.*|trigger|rewind|last_gasp|reward|hit|pilfer).wav))'</span><span class="p">,</span> <span class="n">F</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c"># mkdir has no exist_ok and throw exception</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">subdir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">subdir</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Основную работу тут сделал <code class="highlighter-rouge">Regex</code>. <code class="highlighter-rouge">re.split</code> разбивает вывод запроса на группы, и нам нужна первая, где и лежало имя карты, чтобы сгруппировать наши звуки.</p>
+
+<p>Последней моей задачей было доставание из веб-сайта таблицы и конвертирование её в JSON. Тут нам поможет <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s">"https://www.legends-decks.com/card/339/calm"</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="s">"html.parser"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">rows</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'table'</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'tbody'</span><span class="p">)</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'tr'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+  <span class="n">cells</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'td'</span><span class="p">)</span>
+  <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cells</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">text_lower</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_lower</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">text</span><span class="p">:</span>
+      <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cell</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'img'</span><span class="p">):</span>
+      <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'img'</span><span class="p">)[</span><span class="s">'alt'</span><span class="p">])</span>
+  <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+</code></pre>
+</div>
+<p>Хаки для тега <code class="highlighter-rouge">&lt;img&gt;</code> нужны где в таблице используется картинка с аттрибутом <code class="highlighter-rouge">alt</code> вместо текста.</p>
+
+	</div>
+	Теги: <a href="/tag/snippet">snippet</a>&nbsp;<a href="/tag/python">python</a>&nbsp;
+	<!-- begin wwww.htmlcommentbox.com -->
+	<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+	<link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+	<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24XEbEQPXdMgCr2bUB7Jzs40"+"&opts=16734&num=10&ts=1488638459521");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+	<!-- end www.htmlcommentbox.com -->
+</article>
+
+</div>
+  </div>
+  <footer id="footer">
+     <p> Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>. ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107. </p>
+  </footer>
+</body>
+</html>
