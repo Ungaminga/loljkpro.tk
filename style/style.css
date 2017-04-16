@@ -75,7 +75,7 @@ h1 a:hover, h2 a:hover{
 	color: #cb4b16;
 }
 
-p > code{
+p > code, li > code{
 	color: greenyellow ;
 }
 
