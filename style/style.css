@@ -247,11 +247,12 @@ article.post_num_5 a+img {
 	width: 200px;
 	margin-left: -180px;
 	margin-top: 22px;
-	display: none;
+	visibility: hidden;
 	opacity: 0;
 	transition: 0.2s;
 }
 article.post_num_5 a:hover+img {
+	visibility: visible;
 	opacity: 1;
 }
 
@@ -260,10 +261,12 @@ article.post_num_6 a+img {
 	width: 200px;
 	margin-left: -150px;
 	margin-top: 22px;
+	visibility: hidden;
 	opacity: 0;
-	transition: 0.2s;
+	transition: 0.5s;
 }
 article.post_num_6 a:hover+img {
+	visibility: visible;
 	opacity: 1;
 }
 

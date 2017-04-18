@@ -22,6 +22,7 @@
 <link href="/style/style.css" rel="stylesheet" />
 <link href="/style/style_highlight.css" rel="stylesheet" />
 <script async src="/scripts/analytics.js"></script>
+<script defer src="/scripts/checkstream.js"></script>
 </head> 
 <body>
   <header id="header">
@@ -35,23 +36,6 @@
         <details> <summary>Написать мне </summary> <a href="mailto:loljkpro@cock.li">Почта</a>, <a href="xmpp:richmond@leechcraft.org">Жабер</a> </details>
         <a href = "https://ungaminga.github.io/TES-L-Card-Images-Gallery/">Галерея изображений</a> и <a href = "https://ungaminga.github.io/TES-L-Localizated-Sounds-Gallery/"> звуков</a> из <acronym title="The Elder Scrolls: Legends">TES:L</acronym>.
         Новые <a href = "https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">релизы</a> моего трекера для TES:L.<br>
-        <script type="text/javascript">
-	var stream_name = "loljkpro";
-	var url = "https://api.twitch.tv/kraken/streams/"+stream_name+"?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm";
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', url, true);
-	xhr.responseType = 'json';
-	
-	xhr.onload = function() {
-	if (xhr.status == 200 && xhr.response["stream"] != null)
-	{
-		var span = document.createElement('span');
-		span.innerHTML = "Я <a href='https://www.twitch.tv/"+stream_name+"'>транслирую</a> " + xhr.response["stream"]["game"];
-		document.getElementById("sidebar1").appendChild(span);
-	}};
-	
-	xhr.send();
-</script>
       </div>
     <aside id="sidebar2"> 
 		<div style="margin-bottom: 5px" class="posts_list">
@@ -86,8 +70,7 @@
 				<a style="font-size: 100%; color: yellow;" href="/tag/en" title="1">en</a>
 				<a style="font-size: 200%; color: yellow;" href="/tag/games" title="8">games</a>
 				<a style="font-size: 200%; color: yellow;" href="/tag/guide" title="8">guide</a>
-				<a style="font-size: 80%; color: yellow;" href="/tag/hack" title="2">hack</a>
-				<a style="font-size: 80%; color: yellow;" href="/tag/hacking" title="2">hacking</a>
+				<a style="font-size: 120%; color: yellow;" href="/tag/hack" title="4">hack</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/jekyll" title="1">jekyll</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/kiss" title="1">kiss</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/linux" title="1">linux</a>

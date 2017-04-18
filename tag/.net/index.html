@@ -22,6 +22,7 @@
 <link href="/style/style.css" rel="stylesheet" />
 <link href="/style/style_highlight.css" rel="stylesheet" />
 <script async src="/scripts/analytics.js"></script>
+<script defer src="/scripts/checkstream.js"></script>
 </head> 
 <body>
   <header id="header">
@@ -35,23 +36,6 @@
         <details> <summary>Написать мне </summary> <a href="mailto:loljkpro@cock.li">Почта</a>, <a href="xmpp:richmond@leechcraft.org">Жабер</a> </details>
         <a href = "https://ungaminga.github.io/TES-L-Card-Images-Gallery/">Галерея изображений</a> и <a href = "https://ungaminga.github.io/TES-L-Localizated-Sounds-Gallery/"> звуков</a> из <acronym title="The Elder Scrolls: Legends">TES:L</acronym>.
         Новые <a href = "https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">релизы</a> моего трекера для TES:L.<br>
-        <script type="text/javascript">
-	var stream_name = "loljkpro";
-	var url = "https://api.twitch.tv/kraken/streams/"+stream_name+"?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm";
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', url, true);
-	xhr.responseType = 'json';
-	
-	xhr.onload = function() {
-	if (xhr.status == 200 && xhr.response["stream"] != null)
-	{
-		var span = document.createElement('span');
-		span.innerHTML = "Я <a href='https://www.twitch.tv/"+stream_name+"'>транслирую</a> " + xhr.response["stream"]["game"];
-		document.getElementById("sidebar1").appendChild(span);
-	}};
-	
-	xhr.send();
-</script>
       </div>
     <aside id="sidebar2"> 
 		<div style="margin-bottom: 5px" class="posts_list">
@@ -86,8 +70,7 @@
 				<a style="font-size: 100%; color: yellow;" href="/tag/en" title="1">en</a>
 				<a style="font-size: 200%; color: yellow;" href="/tag/games" title="8">games</a>
 				<a style="font-size: 200%; color: yellow;" href="/tag/guide" title="8">guide</a>
-				<a style="font-size: 80%; color: yellow;" href="/tag/hack" title="2">hack</a>
-				<a style="font-size: 80%; color: yellow;" href="/tag/hacking" title="2">hacking</a>
+				<a style="font-size: 120%; color: yellow;" href="/tag/hack" title="4">hack</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/jekyll" title="1">jekyll</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/kiss" title="1">kiss</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/linux" title="1">linux</a>
@@ -113,7 +96,7 @@
 			<a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-4/">TES-L: достаём игровые ресурсы, ч. 4</a>
 		
 		</h2>
-		<div class="tagspage_tags"> Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hacking">hacking</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;</div>
+		<div class="tagspage_tags"> Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hack">hack</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;</div>
 		<div class="post-content"><p>К сожалению, видеогайд записать не вышло. В качестве примера я буду использовать свое <a href="https://github.com/Ungaminga/TES-L-Modifided-dll/commit/b615c91f0a336224dae4946db0dfb8bb84b8c1dd">последнее изменение</a> модифицированных библиотек.</p>
 
 <p>Стояла следующая задача: сохранение колод через <a href="https://github.com/Ungaminga/TES-L-Modifided-dll/blob/master/source/DeckDoneButton.cs#L87">DeckDoneButton.cs</a> не сохранял последние изменения нашей колоды. И действительно, сохранение изменений срабатывает исключительно в <a href="https://github.com/Ungaminga/TES-L-Modifided-dll/blob/master/source/DeckEditorSave.cs">DeckEditorSave.cs</a>, куда мы и отправим сохранение вот той новой колоды. Конечно, я задавался мыслью, а не стоит ли сохранение оставить <em>исключительно</em> в <code class="highlighter-rouge">DeckEditorSave.cs</code> – ответ нет, не стоит, т.к. мы можем на самом деле не сохранять колоду.</p>
@@ -129,7 +112,7 @@
 			<a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-3/">TES-L: достаём игровые ресурсы, ч. 3</a>
 		
 		</h2>
-		<div class="tagspage_tags"> Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hacking">hacking</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;</div>
+		<div class="tagspage_tags"> Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hack">hack</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;</div>
 		<div class="post-content"><p>Уверен, вы соскучились по новым постам, все это время я упорно занимался реверсингом клиента. Сегодня расскажу про свои успехи и утилиты.</p>
 
 <p><a href="https://github.com/0xd4d/dnSpy">dnSpy</a> от @0xd4d:<br />

@@ -23,6 +23,7 @@
 <link href="/style/style.css" rel="stylesheet" />
 <link href="/style/style_highlight.css" rel="stylesheet" />
 <script async src="/scripts/analytics.js"></script>
+<script defer src="/scripts/checkstream.js"></script>
 </head> 
 <body>
   <header id="header">
@@ -59,23 +60,6 @@
         <details> <summary>Написать мне </summary> <a href="mailto:loljkpro@cock.li">Почта</a>, <a href="xmpp:richmond@leechcraft.org">Жабер</a> </details>
         <a href = "https://ungaminga.github.io/TES-L-Card-Images-Gallery/">Галерея изображений</a> и <a href = "https://ungaminga.github.io/TES-L-Localizated-Sounds-Gallery/"> звуков</a> из <acronym title="The Elder Scrolls: Legends">TES:L</acronym>.
         Новые <a href = "https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">релизы</a> моего трекера для TES:L.<br>
-        <script type="text/javascript">
-	var stream_name = "loljkpro";
-	var url = "https://api.twitch.tv/kraken/streams/"+stream_name+"?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm";
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', url, true);
-	xhr.responseType = 'json';
-	
-	xhr.onload = function() {
-	if (xhr.status == 200 && xhr.response["stream"] != null)
-	{
-		var span = document.createElement('span');
-		span.innerHTML = "Я <a href='https://www.twitch.tv/"+stream_name+"'>транслирую</a> " + xhr.response["stream"]["game"];
-		document.getElementById("sidebar1").appendChild(span);
-	}};
-	
-	xhr.send();
-</script>
       </div>
     <aside id="sidebar2"> 
 		<div style="margin-bottom: 5px" class="posts_list">
@@ -110,8 +94,7 @@
 				<a style="font-size: 100%; color: yellow;" href="/tag/en" title="1">en</a>
 				<a style="font-size: 200%; color: yellow;" href="/tag/games" title="8">games</a>
 				<a style="font-size: 200%; color: yellow;" href="/tag/guide" title="8">guide</a>
-				<a style="font-size: 80%; color: yellow;" href="/tag/hack" title="2">hack</a>
-				<a style="font-size: 80%; color: yellow;" href="/tag/hacking" title="2">hacking</a>
+				<a style="font-size: 120%; color: yellow;" href="/tag/hack" title="4">hack</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/jekyll" title="1">jekyll</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/kiss" title="1">kiss</a>
 				<a style="font-size: 100%; color: yellow;" href="/tag/linux" title="1">linux</a>
@@ -185,7 +168,7 @@
 <p>Стояла следующая задача: сохранение колод через <a href="https://github.com/Ungaminga/TES-L-Modifided-dll/blob/master/source/DeckDoneButton.cs#L87">DeckDoneButton.cs</a> не сохранял последние изменения нашей колоды. И действительно, сохранение изменений срабатывает исключительно в <a href="https://github.com/Ungaminga/TES-L-Modifided-dll/blob/master/source/DeckEditorSave.cs">DeckEditorSave.cs</a>, куда мы и отправим сохранение вот той новой колоды. Конечно, я задавался мыслью, а не стоит ли сохранение оставить <em>исключительно</em> в <code class="highlighter-rouge">DeckEditorSave.cs</code> – ответ нет, не стоит, т.к. мы можем на самом деле не сохранять колоду.</p>
 
 <div class="readmore"> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-4/"> Читать далее </a> </div>
-		 Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hacking">hacking</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;  </div>
+		 Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hack">hack</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;  </div>
 	</article>
 
 	<article class="post post_num_9">
@@ -197,7 +180,7 @@
 Это исключительная утилита, которая позволяет смотреть, редактировать и встраивать в .net/C# библиотеки код. Обладает некоторой способностью в борьбе с обфускацией, на данный момент практически единственная утилита имеющая подобный функционал. Можно конечно пользоваться <a href="http://www.red-gate.com/products/dotnet-development/reflector/">.NET Reflector</a>, но он вроде-бы платный или ещё с ним какие-то бока. Я пока остановился на dnSpy. Следует заметить, около 90% программы локализовано под русский язык.</p>
 
 <div class="readmore"> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-3/"> Читать далее </a> </div>
-		 Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hacking">hacking</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;  </div>
+		 Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/games">games</a>&nbsp;<a href="/tag/unity">unity</a>&nbsp;<a href="/tag/hack">hack</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/dnSpy">dnSpy</a>&nbsp;<a href="/tag/.net">.net</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;  </div>
 	</article>
 
 	<article class="post post_num_8">
@@ -233,6 +216,8 @@
 		<span class="meta">Mar 08, 2017</span>
 		<h2><a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B/">TES-L: достаём игровые ресурсы</a></h2>
 		<div class="post-content"><p>Мне очень понравилась озвучка <a href="https://www.legends-decks.com/card/61/tenmarswiftclaw">одной карты</a><img src="https://www.legends-decks.com/img_cards/tenmarswiftclaw.png" alt="" />, но достать её я так и не смог: нашел только нелокализированую озвучку, теперь имею кучу вздохов и бьющихся бутылок. Зато <a href="https://github.com/Ungaminga/TES-L-Card-Images">смог достать</a> и сделать из них <a href="https://ungaminga.github.io/TES-L-Card-Images-Gallery/">галерею</a>, может <a href="https://github.com/Ungaminga/gallery">надо</a> кому будет, в моих лучших традициях без джаваскрипта, полностью статическая.</p>
+
+<p>Вы так-же можете достать ресурсы с помощью <a href="https://github.com/Ungaminga/UnityStudio">Unity Studio</a> из <code class="highlighter-rouge">The Elder Scrolls Legends_Data</code>. Но стоит учесть, что с выходом Dark Brotherhood изображения с высоким разрешением переместили в <code class="highlighter-rouge">The Elder Scrolls Legends_Data\StreamingAssets\en_US</code>.</p>
 
 <p>Как сделана локализация я все ещё не знаю, но <a href="https://www.jetbrains.com/decompiler/">dotPeek</a> отображает кучу информации про классы и методы; судя по всему, разработчики не сильно заморачивались по поводу шифрования методов. Если кто силен в декомпиляции .net и unity – пишите мне, контакты справа; буду очень благодарен.</p>
 
