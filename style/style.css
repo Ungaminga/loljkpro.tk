@@ -78,12 +78,6 @@ h1 a:hover, h2 a:hover{
 p > code, li > code{
 	color: greenyellow ;
 }
-
-.post, #header, #header2, #sidebar1, #sidebar2, #footer, .postnavigation{
-	background-color: rgba(38, 102, 93, 1);
-	box-shadow: 4px 6px 10px green;
-}
-
 code {
 	font: 0.85em Monaco, Courier, Monospace;
 }
@@ -96,6 +90,22 @@ blockquote {
 	font-style: italic;
 	line-height: 1.5em;
 	border-color: #cb4b16;
+}
+
+img.photo {
+	width: 400px;
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+.about {
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.post, #header, #header2, #sidebar1, #sidebar2, #footer, .postnavigation, .about{
+	background-color: rgba(38, 102, 93, 1);
+	box-shadow: 4px 6px 10px green;
 }
 
 acronym, abbr {
