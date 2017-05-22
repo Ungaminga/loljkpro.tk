@@ -280,6 +280,24 @@ article.post_num_6 a:hover+img {
 	opacity: 1;
 }
 
+article.post_num_15 img.Bracket {
+	max-width: 600px;
+}
+
+article.post_num_15 a+img {
+	position: absolute;
+	width: 200px;
+	margin-left: 0px;
+	margin-top: 22px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+article.post_num_15 a:hover+img {
+	visibility: visible;
+	opacity: 1;
+}
+
 /*** Pagination ***/
 .postnavigation {
 	margin-top: -5px;
