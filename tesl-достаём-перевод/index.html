@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+<meta charset="UTF-8">
+<title>  TESL: Достаём перевод | loljkpro.tk
+           </title>
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="TESL: Достаём перевод" />
+<meta name="author" content="loljkpro" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Сегодня я расскажу как доставать перевод непосредственно из игры. Для этого нам нужен будет Navicat. База перевода использует SQLite и лежит в USERPROFILE%\AppData\LocalLow\Dire Wolf Digital\The Elder Scrolls_ Legends По этому пути мы найдем 1-2 файла, нужный нам LocalizationDB.Steam.db или LocalizationDB.db в зависимости от версии игры, которую мы используем. В принципе, удобней использовать steam-версию, т.к. в ней можно прямо в игре переключать язык. Открываем базу со включенной английской игрой и делаем дубликат таблицы Lookup. Называем её Lookup_orig. Теперь заходим в игру, меняем язык на русский и мы можем достать нашу локализацию в виде Id-англ_имя-англ_описание-рус_имя-рус_описание:" />
+<meta property="og:description" content="Сегодня я расскажу как доставать перевод непосредственно из игры. Для этого нам нужен будет Navicat. База перевода использует SQLite и лежит в USERPROFILE%\AppData\LocalLow\Dire Wolf Digital\The Elder Scrolls_ Legends По этому пути мы найдем 1-2 файла, нужный нам LocalizationDB.Steam.db или LocalizationDB.db в зависимости от версии игры, которую мы используем. В принципе, удобней использовать steam-версию, т.к. в ней можно прямо в игре переключать язык. Открываем базу со включенной английской игрой и делаем дубликат таблицы Lookup. Называем её Lookup_orig. Теперь заходим в игру, меняем язык на русский и мы можем достать нашу локализацию в виде Id-англ_имя-англ_описание-рус_имя-рус_описание:" />
+<link rel="canonical" href="http://loljkpro.tk//tesl-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/" />
+<meta property="og:url" content="http://loljkpro.tk//tesl-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/" />
+<meta property="og:site_name" content="loljkpro.tk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-05T00:00:00+03:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Сегодня я расскажу как доставать перевод непосредственно из игры. Для этого нам нужен будет Navicat. База перевода использует SQLite и лежит в USERPROFILE%\\AppData\\LocalLow\\Dire Wolf Digital\\The Elder Scrolls_ Legends По этому пути мы найдем 1-2 файла, нужный нам LocalizationDB.Steam.db или LocalizationDB.db в зависимости от версии игры, которую мы используем. В принципе, удобней использовать steam-версию, т.к. в ней можно прямо в игре переключать язык. Открываем базу со включенной английской игрой и делаем дубликат таблицы Lookup. Называем её Lookup_orig. Теперь заходим в игру, меняем язык на русский и мы можем достать нашу локализацию в виде Id-англ_имя-англ_описание-рус_имя-рус_описание:","author":{"@type":"Person","name":"loljkpro"},"@type":"BlogPosting","url":"http://loljkpro.tk//tesl-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/","publisher":null,"image":null,"headline":"TESL: Достаём перевод","dateModified":"2017-10-05T00:00:00+03:00","datePublished":"2017-10-05T00:00:00+03:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://loljkpro.tk//tesl-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="/style/style.css" rel="stylesheet" />
+<link href="/style/style_highlight.css" rel="stylesheet" />
+<script async src="/scripts/analytics.js"></script>
+<script defer src="/scripts/checkstream.js"></script>
+</head> 
+<body>
+  <header id="header">
+    <h1><a href="/"> loljkpro.tk — Твой личный интернет-хохол </a></h1>
+  </header>
+  
+  <div id="page">
+    <nav id="sidebar">
+      <div id="sidebar1">
+        <details> <summary>Обо мне </summary> Мне 25 лет, я живу в Киеве, <br>увлекаюсь <a href="https://steamcommunity.com/profiles/76561198112629280">видеоиграми</a>, музыкой и <a href=https://github.com/Ungaminga>программированием</a>. <br> Можете <a href="mailto:loljkpro@cock.li">написать мне</a> по поводу работы; резюме <a href="/about">тут</a>.</details>
+        <details> <summary>Написать мне </summary> <a href="mailto:loljkpro@cock.li">Почта</a>, <a href="xmpp:richmond@leechcraft.org">Жабер</a> </details>
+        <a href = "https://ungaminga.github.io/TES-L-Card-Images-Gallery/">Галерея изображений</a> и <a href = "https://ungaminga.github.io/TES-L-Localizated-Sounds-Gallery/"> звуков</a> из <acronym title="The Elder Scrolls: Legends">TES:L</acronym>.
+        Новые <a href = "https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">релизы</a> моего трекера для TES:L.<br>
+        <a href="http://teslegends.pro/">Декбилдер</a> от <a href="https://www.twitch.tv/mraquaman3301">@MrAquaman</a>. <br>
+      </div>
+    <aside id="sidebar2"> 
+		<div style="margin-bottom: 5px" class="posts_list">
+			<div style="margin: 0px 0px 5px 10px; text-align: left">
+				Посты: 
+			</div>
+			<ul>
+			<li> <a href="/tesl-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/">TESL: Достаём перевод</a></li>
+			<li> <a href="/tesl-steam-release-etc/">TESL: Steam Release etc.</a></li>
+			<li> <a href="/tesl-social-features-failed-to-initialize/">TESL: Social Features Failed to Initialize</a></li>
+			<li> <a href="/tesl-%D0%BF%D0%B0%D1%82%D1%87-1-64-1/">TESL: Патч 1.64.1</a></li>
+			<li> <a href="/tesl-%D0%B0%D1%81%D0%BA%D0%B5%D1%82%D0%BB%D0%B8%D0%B3%D0%B0-21-05-2017/">TESL: АскетЛига 21.05.2017</a></li>
+			<li> <a href="/tesl-tracker-%D0%B3%D0%B0%D0%B9%D0%B4-%D0%BF%D0%BE-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E/">TES-L Tracker: Гайд по использованию</a></li>
+			<li> <a href="/tesl-tracker-release-usage-guide/">TES-L Tracker Release: Usage Guide</a></li>
+			<li> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-2/">Снипеты для Python, ч. 2</a></li>
+			<li> <a href="/%D1%81%D0%BD%D0%B8%D0%BF%D0%B5%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-python-%D1%87-1/">Снипеты для Python, ч. 1</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-4/">TES-L: достаём игровые ресурсы, ч. 4</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-3/">TES-L: достаём игровые ресурсы, ч. 3</a></li>
+			<li> <a href="/%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7-tes-legends/">Официальный релиз TES: Legends</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D1%87-2/">TES-L: достаём игровые ресурсы, ч. 2</a></li>
+			<li> <a href="/tes-l-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D1%8B%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B/">TES-L: достаём игровые ресурсы</a></li>
+			<li> <a href="/tes-legends-%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D0%B5-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE/">TES: Legends: Легендарное начало</a></li>
+			<li> <a href="/%D1%84%D0%B8%D1%88%D0%BA%D0%B8-sublime-text/">Фишки Sublime Text</a></li>
+			<li> <a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a></li>
+			<li> <a href="/dcss-demigod-ice-elementalist/">DCSS: Demigod Ice Elementalist</a></li>
+			<li> <a href="/tes-legends-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-%D0%B8-%D0%BC%D0%BE%D1%8F-%D0%BA%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0/">TES: Legend — начало и моя колода</a></li>
+			<li> <a href="/linux-tor-%D0%B8-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%BD%D0%B0-webkit/">Linux: Tor и браузеры на Webkit</a></li>
+			</ul>
+			<!-- Scroll ul bottom --><script>el = document.querySelectorAll("#sidebar2 ul")[0]; el.scrollTop=el.scrollHeight/3.5 | 0;</script>
+		</div>
+		<div class="tagcloud">
+			<div style="margin: 0px 0px -10px 10px; text-align: left"> Облако тегов: </div>
+				<a style="font-size: 100%; color: yellow;" href="/tag/.net" title="2">.net</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/SQLite" title="1">SQLite</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/bug" title="1">bug</a>
+				<a style="font-size: 140%; color: yellow;" href="/tag/c#" title="4">c#</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/dcss" title="1">dcss</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/dnSpy" title="2">dnSpy</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/en" title="1">en</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/fix" title="1">fix</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/game" title="1">game</a>
+				<a style="font-size: 185%; color: yellow;" href="/tag/games" title="11">games</a>
+				<a style="font-size: 180%; color: yellow;" href="/tag/guide" title="10">guide</a>
+				<a style="font-size: 140%; color: yellow;" href="/tag/hack" title="4">hack</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/jekyll" title="1">jekyll</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/kiss" title="1">kiss</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/linux" title="1">linux</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/python" title="2">python</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/release" title="2">release</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/snippet" title="2">snippet</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/sublime" title="1">sublime</a>
+				<a style="font-size: 200%; color: yellow;" href="/tag/tes_legends" title="14">tes_legends</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/tor" title="1">tor</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/tournament" title="1">tournament</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/tracker" title="2">tracker</a>
+				<a style="font-size: 140%; color: yellow;" href="/tag/unity" title="4">unity</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/web" title="1">web</a>
+				<a style="font-size: 100%; color: yellow;" href="/tag/каджитская_правда" title="2">каджитская_правда</a>
+				<a style="font-size: 90%; color: yellow;" href="/tag/перевод" title="1">перевод</a>
+				
+		</div>
+ </aside>
+    </nav>
+
+    <div id="content"><article class="post post_num_19">
+	<span class="meta">Oct 05, 2017</span>
+	<h2>
+	
+		<a href="/tesl-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%91%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/">TESL: Достаём перевод</a>
+	
+	</h2>
+	<div class="post-content"><p>Сегодня я расскажу как доставать перевод непосредственно из игры. Для этого нам нужен будет <a href="https://rutracker.org/forum/viewtopic.php?t=5327915">Navicat</a>. База перевода использует <code class="highlighter-rouge">SQLite</code> и лежит в</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">USERPROFILE%\AppData\LocalLow\Dire Wolf Digital\The Elder Scrolls_ Legends</code></pre></figure>
+
+<p>По этому пути мы найдем 1-2 файла, нужный нам <code class="highlighter-rouge">LocalizationDB.Steam.db</code> или <code class="highlighter-rouge">LocalizationDB.db</code> в зависимости от версии игры, которую мы используем. В принципе, удобней использовать steam-версию, т.к. в ней можно прямо в игре переключать язык.</p>
+
+<p>Открываем базу со включенной английской игрой и делаем дубликат таблицы <code class="highlighter-rouge">Lookup</code>. Называем её <code class="highlighter-rouge">Lookup_orig</code>. Теперь заходим в игру, меняем язык на русский и мы можем достать нашу локализацию в виде <code class="highlighter-rouge">Id-англ_имя-англ_описание-рус_имя-рус_описание</code>:</p>
+
+<p>Жмём на кнопку Query сверху и <a href="/images/new_query.png">создаём новый запрос</a>:</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+<span class="k">REPLACE</span> <span class="p">(</span><span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span><span class="p">,</span> <span class="nv">"-title"</span><span class="p">,</span> <span class="nv">""</span><span class="p">)</span> <span class="k">AS</span> <span class="n">id</span><span class="p">,</span>
+<span class="n">Lookup_orig_1</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">title</span><span class="p">,</span>
+<span class="n">Lookup_orig_2</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+<span class="n">Lookup_1</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">title_ru</span><span class="p">,</span>
+<span class="n">Lookup_2</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">text_ru</span>
+<span class="k">FROM</span>
+<span class="n">Lookup_orig</span> <span class="k">as</span> <span class="n">Lookup_orig_1</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup_orig</span> <span class="k">as</span> <span class="n">Lookup_orig_2</span> <span class="k">ON</span> <span class="n">id</span> <span class="o">||</span> <span class="nv">"-game_text"</span> <span class="o">=</span> <span class="n">Lookup_orig_2</span><span class="p">.</span><span class="nv">"key"</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup</span> <span class="k">as</span> <span class="n">Lookup_1</span> <span class="k">ON</span> <span class="n">Lookup_orig_2</span><span class="p">.</span><span class="nv">"key"</span> <span class="o">=</span> <span class="n">Lookup_1</span><span class="p">.</span><span class="nv">"key"</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup</span> <span class="k">as</span> <span class="n">Lookup_2</span> <span class="k">ON</span> <span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span> <span class="o">=</span> <span class="n">Lookup_2</span><span class="p">.</span><span class="nv">"key"</span>
+<span class="k">WHERE</span>
+<span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span> <span class="k">like</span> <span class="nv">"%-title"</span> 
+</code></pre></div></div>
+<p><br />
+Попытаюсь построчно объяснить, что мы тут делаем:</p>
+
+<p><code class="highlighter-rouge">Select</code> – тип запроса, т.е. простая выборка. Бывают запросы ещё типа <code class="highlighter-rouge">Update</code>, <code class="highlighter-rouge">Delete</code>, <code class="highlighter-rouge">Replace</code>.</p>
+
+<p><code class="highlighter-rouge">REPLACE (Lookup_orig_1."key", "-title", "") AS id</code> – тут мы убираем часть <code class="highlighter-rouge">-title</code>. Типичный вид строки с названием карты: <code class="highlighter-rouge">751b6b44-b11c-11e6-80f5-76304dec7eb7-title</code>. Для описания нам нужно будет использовать строку <code class="highlighter-rouge">751b6b44-b11c-11e6-80f5-76304dec7eb7-game_text</code>. Об этом ниже.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Lookup_orig_1</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">title</span><span class="p">,</span>
+<span class="n">Lookup_orig_2</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+<span class="n">Lookup_1</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">title_ru</span><span class="p">,</span>
+<span class="n">Lookup_2</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">text_ru</span>
+</code></pre></div></div>
+<p>Следующие, после ID, поля нашей таблицы. Дабы небыло путаницы, мы заранее переименовуем название наших столбцов и таблиц тоже. Эти изменения временные и работают только во время обработки запроса.</p>
+
+<p><code class="highlighter-rouge">Lookup_orig as Lookup_orig_1</code> – Переименовка таблицы.</p>
+
+<p><code class="highlighter-rouge">LEFT JOIN Lookup_orig as Lookup_orig_2 ON id || "-game_text" = Lookup_orig_2."key"</code> – Мы используем Left Join, т.к. нам нужны даже строки, где нет <code class="highlighter-rouge">-game_text</code>.<br />
+<code class="highlighter-rouge">||</code> в <code class="highlighter-rouge">SQLite</code> является оператором конкатенации строк, или, проще говоря, сцепляет две в одну.</p>
+
+<p>Добавляем русский перевод названия и описания карт:</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup</span> <span class="k">as</span> <span class="n">Lookup_1</span> <span class="k">ON</span> <span class="n">Lookup_orig_2</span><span class="p">.</span><span class="nv">"key"</span> <span class="o">=</span> <span class="n">Lookup_1</span><span class="p">.</span><span class="nv">"key"</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup</span> <span class="k">as</span> <span class="n">Lookup_2</span> <span class="k">ON</span> <span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span> <span class="o">=</span> <span class="n">Lookup_2</span><span class="p">.</span><span class="nv">"key"</span>
+</code></pre></div></div>
+
+<p>В блоке <code class="highlighter-rouge">WHERE</code> можно установить дополнительные условия, к примеру:</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WHERE</span>
+<span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span> <span class="k">like</span> <span class="nv">"%-title"</span> 
+<span class="k">AND</span> <span class="n">Lookup_orig_1</span><span class="p">.</span><span class="n">value</span> <span class="k">in</span> <span class="p">(</span><span class="nv">"Detain"</span><span class="p">,</span>
+<span class="nv">"Divine Conviction"</span><span class="p">,</span>
+<span class="nv">"Expert Atromancer"</span><span class="p">,</span>
+<span class="nv">"Fate's Witness"</span><span class="p">,</span>
+<span class="nv">"Initiate of Hircine"</span><span class="p">,</span>
+<span class="nv">"Orc Clansman"</span><span class="p">,</span>
+<span class="nv">"Quin'Rawl Skulker"</span><span class="p">,</span>
+<span class="nv">"Student of Arms"</span><span class="p">,</span>
+<span class="nv">"Stalking Crocodile"</span><span class="p">,</span>
+<span class="nv">"Starved Hunger"</span><span class="p">,</span>
+<span class="nv">"Valenwood Trapper"</span><span class="p">,</span>
+<span class="nv">"Whiterun Recruit"</span><span class="p">,</span>
+<span class="nv">"Cavern Spider"</span><span class="p">,</span>
+<span class="nv">"Vision of the Tenth Eye"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Это даст нам возможность получить выборку только из нужных названий карт.
+Так-же я столкнулся с проблемой, когда мне вместо карт надо было выбрать тайтлы. Типичный вид строки с тайтлом выглядит так: <code class="highlighter-rouge">com.direwolfdigital.hydra.data.achievements.titles.theuntouchable.title</code>.<br />
+<code class="highlighter-rouge">Replace ".title"</code> затронет и первое вхождение. Решение было следующим:</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+<span class="n">substr</span><span class="p">(</span><span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">length</span><span class="p">(</span><span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span><span class="p">)</span> <span class="o">-</span> <span class="k">length</span><span class="p">(</span><span class="nv">".title"</span><span class="p">))</span> <span class="k">AS</span> <span class="n">id</span><span class="p">,</span>
+<span class="n">Lookup_orig_1</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">title</span><span class="p">,</span>
+<span class="n">Lookup_orig_2</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+<span class="n">Lookup_1</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">title_ru</span><span class="p">,</span>
+<span class="n">Lookup_2</span><span class="p">.</span><span class="n">value</span> <span class="k">as</span> <span class="n">text_ru</span>
+<span class="k">FROM</span>
+<span class="n">Lookup_orig</span> <span class="k">as</span> <span class="n">Lookup_orig_1</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup_orig</span> <span class="k">as</span> <span class="n">Lookup_orig_2</span> <span class="k">ON</span> <span class="p">((</span><span class="n">id</span> <span class="o">||</span> <span class="nv">".description"</span><span class="p">)</span> <span class="o">=</span> <span class="n">Lookup_orig_2</span><span class="p">.</span><span class="nv">"key"</span><span class="p">)</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup</span> <span class="k">as</span> <span class="n">Lookup_1</span> <span class="k">ON</span> <span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span> <span class="o">=</span> <span class="n">Lookup_1</span><span class="p">.</span><span class="nv">"key"</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">Lookup</span> <span class="k">as</span> <span class="n">Lookup_2</span> <span class="k">ON</span> <span class="n">Lookup_orig_2</span><span class="p">.</span><span class="nv">"key"</span> <span class="o">=</span> <span class="n">Lookup_2</span><span class="p">.</span><span class="nv">"key"</span>
+<span class="k">WHERE</span>
+<span class="n">Lookup_orig_1</span><span class="p">.</span><span class="nv">"key"</span> <span class="k">like</span> <span class="nv">"%titles%title"</span>
+</code></pre></div></div>
+<p>С помощью <code class="highlighter-rouge">substr</code> мы убираем последние символы (на самом деле берем подстроку нужного размера).</p>
+
+
+	</div>
+	Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/перевод">перевод</a>&nbsp;<a href="/tag/SQLite">SQLite</a>&nbsp;
+	<!-- begin wwww.htmlcommentbox.com -->
+	<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+	<link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+	<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24XEbEQPXdMgCr2bUB7Jzs40"+"&opts=16734&num=10&ts=1488638459521");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+	<!-- end www.htmlcommentbox.com -->
+</article>
+
+</div>
+  </div>
+  <footer id="footer">
+     <p> Сделано с любовью с помощью <a href="https://jekyllrb.com/"> Jekyll</a>. ©<a href="mailto:loljkpro@cock.li">loljkpro</a>, 2017-2107. </p>
+  </footer>
+</body>
+</html>
