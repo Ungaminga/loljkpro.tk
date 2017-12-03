@@ -41,8 +41,10 @@
 
 	function hide()
 	{
+        var expiryDate = new Date();
+        expiryDate.setMonth(expiryDate.getMonth() + 1);
 		document.getElementById("header2").style.display="none";
-		document.cookie = "hide=true";
+		document.cookie = "hide=true; expires=" + expiryDate;
 	};
 	</script>
 
