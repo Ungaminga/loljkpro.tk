@@ -108,7 +108,7 @@
 	<script type="text/javascript">
 	function CopyToClipboard(){
 		var textArea = document.createElement("textarea");
-		textArea.value = "http://loljkpro.tk/"+"/fishki-sublime-text/";
+		textArea.value = "http://loljkpro.tk/".slice(0, -1) +"/fishki-sublime-text/";
 		document.body.appendChild(textArea);
 		textArea.select();
 		document.execCommand('copy');

@@ -108,7 +108,7 @@
 	<script type="text/javascript">
 	function CopyToClipboard(){
 		var textArea = document.createElement("textarea");
-		textArea.value = "http://loljkpro.tk/"+"/tesl-patch-1-64-1/";
+		textArea.value = "http://loljkpro.tk/".slice(0, -1) +"/tesl-patch-1-64-1/";
 		document.body.appendChild(textArea);
 		textArea.select();
 		document.execCommand('copy');
