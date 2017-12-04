@@ -105,7 +105,17 @@
 	<span class="meta">Feb 22, 2017</span>
 	<h2>
 	
-		<a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a>
+	<script type="text/javascript">
+	function CopyToClipboard(){
+		var textArea = document.createElement("textarea");
+		textArea.value = "http://loljkpro.tk/"+"/jekyll-env-site-url-i-pidory-mejntejnery/";
+		document.body.appendChild(textArea);
+		textArea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textArea);
+		alert("Ссылка транслитом в буфере обмена.");
+	}</script>
+		<a href="/jekyll-env-site-url-%D0%B8-%D0%BF%D0%B8%D0%B4%D0%BE%D1%80%D1%8B-%D0%BC%D0%B5%D0%B9%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D1%8B/">JEKYLL_ENV и пидоры-мейнтейнеры</a> <a onclick="CopyToClipboard()" class="copy_png"><img src="/images/copy.png"></a>
 	
 	</h2>
 	<div class="post-content"><p>Ну че, поставил я себе <a href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag</a>, потом жмакаю <code class="highlighter-rouge">jekyll serve</code> и он мне не генерит правильно <code class="highlighter-rouge">og:url</code>. Покопал, подебажил, и оказалось что если мы пишем jekyl serve не написав до этого <code class="highlighter-rouge">JEKYLL_ENV=production</code>, то наш любый генератор html страниц переписывает <code class="highlighter-rouge">site.url</code>.</p>
