@@ -2,7 +2,7 @@
 <html lang="ru"> 
 <head>
 <meta charset="UTF-8">
-<title>  loljkpro.tk > tracker
+<title>  loljkpro.tk > js
            </title>
 <!-- Begin Jekyll SEO tag v2.4.0 -->
 <meta name="generator" content="Jekyll v3.7.0" />
@@ -11,11 +11,11 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Твой личный интернет-хохол" />
 <meta property="og:description" content="Твой личный интернет-хохол" />
-<link rel="canonical" href="http://loljkpro.tk/tag/tracker/" />
-<meta property="og:url" content="http://loljkpro.tk/tag/tracker/" />
+<link rel="canonical" href="http://loljkpro.tk/tag/js/" />
+<meta property="og:url" content="http://loljkpro.tk/tag/js/" />
 <meta property="og:site_name" content="loljkpro.tk" />
 <script type="application/ld+json">
-{"description":"Твой личный интернет-хохол","author":{"@type":"Person","name":"loljkpro"},"@type":"WebPage","url":"http://loljkpro.tk/tag/tracker/","headline":"loljkpro.tk","@context":"http://schema.org"}</script>
+{"description":"Твой личный интернет-хохол","author":{"@type":"Person","name":"loljkpro"},"@type":"WebPage","url":"http://loljkpro.tk/tag/js/","headline":"loljkpro.tk","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="/style/style.css" rel="stylesheet" />
@@ -110,31 +110,169 @@
     </nav>
 
     <div id="content">
-	<article class="post post_num_14">
-		<span class="meta">Apr 17, 2017</span>
+	<article class="post post_num_22">
+		<span class="meta">Aug 10, 2018</span>
 		<h2>
 		
-			<a href="/tesl-tracker-%D0%B3%D0%B0%D0%B9%D0%B4-%D0%BF%D0%BE-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E/">TES-L Tracker: Гайд по использованию</a>
+			<a href="/%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%BF%D0%BE-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC%D1%83-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8-%D0%BD%D0%B0-twitch-%D0%B5/">Поиск по локальному времени на twitch'е</a>
 		
 		</h2>
-		<div class="tagspage_tags"> Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/tracker">tracker</a>&nbsp;<a href="/tag/release">release</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;</div>
-		<div class="post-content"><p>Можно открыть шампанское: мой <a href="https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">трекер колоды</a> перешел в стадию релиза. Конечно, раньше его разрабатывал <a href="https://github.com/MarioZG/elder-scrolls-legends-tracker">@MarioZG</a>, но в виду <a href="https://github.com/MarioZG/elder-scrolls-legends-tracker/pull/11#issuecomment-289552663">отсутствия времени</a> у старого автора и, как мне кажется, вполне уместной <acronym title="мой трекер модифицирует DLL файлы клиента">консервативной политики разработки</acronym> подобного программного обеспечения, у руля стал я. С версии 0.6.4 до 1.0 программа перенесла <a href="https://github.com/Ungaminga/elder-scrolls-legends-tracker/commits/master">кучу изменений</a> и на это ушел добрый месяц упорной работы. Это совсем не значит что я забью на проект, у меня есть ещё куча идей, просто исправления мелких багов и оптимизаций, которые надо воплотить.</p>
+		<div class="tagspage_tags"> Теги: <a href="/tag/twitch">twitch</a>&nbsp;<a href="/tag/js">js</a>&nbsp;<a href="/tag/html">html</a>&nbsp;</div>
+		<div class="post-content"><p>	Мне понадобилось искать опредленное время в своих VODах и нигде в интернете небыло никаких скриптов или чего-либо что могло бы мне помочь с этим. Вот вам решение на джаваскрипте.</p>
+<p> Кстати, скрипт поддерживает как поиск по отдельному видео так и по целому каналу. Ну и конечно, вы можете смело его своровать, просто забрав исходный код. Никаких обфускаций.</p>
+<input type="text" class ="tt_input" size=40 value="https://www.twitch.tv/loljkpro/video/295038949/" >
+<br>
+<input type="datetime-local" class="tt_date" onchange="TT_Date_Updated()" value="2018-08-09T16:34:02" step=1>
+<br>
+<input type="text" class="tt_date_text" size=15 onchange="TT_Date_Text_Updated()" value="2018-08-09T16:34:02">
+<button onclick="time_reset()">To local time</button>
+<br><br>
+<button onclick="submit()">Parse!</button>
+<br>
+<a class = "tt_link" href =""></a>
+<iframe
+	class = "iframe"
+    src=""
+    height="10"
+    width="480"
+    frameborder="0"
+    scrolling="no"
+    allowfullscreen="true">
+</iframe>
+	<script type="text/javascript">
+		function TT_Date_Updated()
+		{
+			document.getElementsByClassName('tt_date_text')[0].value = document.getElementsByClassName('tt_date')[0].value;
+		}
+		function TT_Date_Text_Updated()
+		{
+			document.getElementsByClassName('tt_date')[0].value = document.getElementsByClassName('tt_date_text')[0].value;
+		}
 
-  <div align="right"> <a href="/tesl-tracker-%D0%B3%D0%B0%D0%B9%D0%B4-%D0%BF%D0%BE-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E/"> Читать далее </a> </div></div>
-		
-	</article>
+		Date.prototype.toDatetimeLocal =
+			function toDatetimeLocal() {
+				var
+					date = this,
+					ten = function (i) {
+						return (i < 10 ? '0' : '') + i;
+					},
+					YYYY = date.getFullYear(),
+					MM = ten(date.getMonth() + 1),
+					DD = ten(date.getDate()),
+					HH = ten(date.getHours()),
+					II = ten(date.getMinutes()),
+					SS = ten(date.getSeconds())
+				;
+				return YYYY + '-' + MM + '-' + DD + 'T' +
+								 HH + ':' + II + ':' + SS;
+			};
+		function time_reset(){document.getElementsByClassName('tt_date')[0].value = new Date().toDatetimeLocal(); TT_Date_Updated();}
 
-	<article class="post post_num_13">
-		<span class="meta">Apr 17, 2017</span>
-		<h2>
-		
-			<a href="/tesl-tracker-release-usage-guide/">TES-L Tracker Release: Usage Guide</a>
-		
-		</h2>
-		<div class="tagspage_tags"> Теги: <a href="/tag/tes_legends">tes_legends</a>&nbsp;<a href="/tag/tracker">tracker</a>&nbsp;<a href="/tag/release">release</a>&nbsp;<a href="/tag/guide">guide</a>&nbsp;<a href="/tag/c#">c#</a>&nbsp;<a href="/tag/en">en</a>&nbsp;</div>
-		<div class="post-content"><p>Time to open champagne: my <a href="https://github.com/Ungaminga/elder-scrolls-legends-tracker/releases">deck tracker</a> is now released. Of course, times ago it’s being developed by <a href="https://github.com/MarioZG/elder-scrolls-legends-tracker">@MarioZG</a>, but in case of his <a href="https://github.com/MarioZG/elder-scrolls-legends-tracker/pull/11#issuecomment-289552663">lack of time</a> and, as i suggest, normally <acronym title="the tracker modifies game DLLs">conservative development politics</acronym> of such software, i stand in head. From 0.6.4 to 1.0 program had <a href="https://github.com/Ungaminga/elder-scrolls-legends-tracker/commits/master">many changes</a> and i had a good long month of steady work on it. Aint reason to think i will throw this project: i got a lot of good ideas, tiny bugs to fix and optimizations, that need to impliment.</p>
+		// Enter button
+		document.getElementsByClassName('tt_input')[0].addEventListener('keypress', function(event) {
+			if (event.keyCode == 13) {
+				event.preventDefault();
+				submit();
+			}
+		});
+		function secondsToHMS(secs) {
+			function z(n){return (n<10?'0':'') + n;}
+			secs = Math.abs(secs);
+			if (z(secs/3600 |0) == 00)
+				return z((secs%3600) / 60 |0) + 'm' + z(secs%60) + 's';
+			else if (z((secs%3600) / 60 |0))
+				return z(secs/3600 |0) + 'h' + z((secs%3600) / 60 |0) + 'm' + z(secs%60) + 's';
 
-  <div align="right"> <a href="/tesl-tracker-release-usage-guide/"> Читать далее </a> </div></div>
+		}
+		function submit(){
+			try
+			{
+				var tt_input = document.getElementsByClassName('tt_input')[0];
+
+				// https://www.twitch.tv/loljkpro/video/294581633
+				var input = tt_input.value;
+
+				// remove possible last slash
+				if (tt_input.value.slice(-1) == "/")
+					tt_input.value = tt_input.value.slice(0, -1);
+
+				if (tt_input.value.includes('video') == false)
+				{
+					find_video_by_user(tt_input.value.substr(tt_input.value.lastIndexOf("twitch.tv/")+"twitch.tv/".length, 
+						tt_input.value.length));
+					return;
+				}
+
+				// 295038949
+				var video_id = tt_input.value.substr(tt_input.value.lastIndexOf("/")+1, tt_input.value.length);
+				post_video(video_id, document.getElementsByClassName('tt_date')[0].value)
+			}
+			catch (err){
+				alert(err);
+			}
+			function find_video_by_user(channel)
+			{
+
+				var time = document.getElementsByClassName('tt_date')[0].value;
+				var dateTime = new Date(time);
+
+				var url = "https://api.twitch.tv/kraken/channels/"+channel+"/videos?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm&broadcast_type=archive&limit=100";
+
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', url, true);
+				xhr.responseType = 'json';
+ 				xhr.onload = function() {
+				if (xhr.status == 200)
+				{
+					var v = "";
+					for (var video of xhr.response["videos"])
+					{
+						var start = new Date(video["recorded_at"]);
+						var finish = new Date(video["recorded_at"]);
+						finish.setSeconds(finish.getSeconds()+video["length"]);
+						if (start < dateTime && finish > dateTime)
+						{
+							post_video(video['_id'].slice(1), time);
+							return;
+						}
+					}
+					alert("nothing is found");
+				}};
+				xhr.send();
+			}
+			function post_video(video_id, time)
+			{
+				// https://api.twitch.tv/kraken/videos/295038949?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm
+				var url = "https://api.twitch.tv/kraken/videos/"+video_id+"?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm";
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', url, true);
+				xhr.responseType = 'json';
+ 				xhr.onload = function() {
+				if (xhr.status == 200)
+				{
+					var timediff = new Date(time) - new Date(xhr.response["recorded_at"]);
+					var finish = new Date(xhr.response["recorded_at"]);
+					finish.setSeconds(finish.getSeconds()+xhr.response["length"]);
+					if (timediff < 0 || new Date(time) > finish)
+					{
+						alert("Incorrect date, no VODs found");
+						return;
+					}
+
+					// ?t=03h09m29s 
+					// http://player.twitch.tv/?video=v40464143&autoplay=false"
+					document.getElementsByClassName('iframe')[0].src="http://player.twitch.tv/?video=v"+video_id+"&time="+secondsToHMS(timediff/1000)+"&autoplay=true";
+					document.getElementsByClassName('iframe')[0].width = 480;
+					document.getElementsByClassName('iframe')[0].height = 360;
+
+					document.getElementsByClassName('tt_link')[0].href = "https://www.twitch.tv/videos/"+video_id+"?t="+secondsToHMS(timediff/1000);
+					document.getElementsByClassName('tt_link')[0].innerHTML = document.getElementsByClassName('tt_link')[0].href;
+				}};
+
+				xhr.send();
+			}
+		}
+	</script> </div>
 		
 	</article>
 

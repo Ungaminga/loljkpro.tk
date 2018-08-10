@@ -241,7 +241,12 @@ a.tes_l_image_link{
 .tagspage_tags{
 	padding-left: 5px;
 }
-
+input {
+	font-size: 14px;
+}
+button {
+	font-size: 13px;
+}
 /* DCSS resize images */
 article.post_num_2 img {
 	width: 32px;
