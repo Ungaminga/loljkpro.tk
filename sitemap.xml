@@ -101,6 +101,10 @@
 <lastmod>2018-08-14T22:47:00+03:00</lastmod>
 </url>
 <url>
+<loc>http://loljkpro.tk/twitch-%D1%82%D0%B0%D0%BA-%D1%82%D1%8B-%D1%81%D1%82%D1%80%D0%B8%D0%BC%D0%B8%D1%88%D1%8C/</loc>
+<lastmod>2018-09-18T02:44:00+03:00</lastmod>
+</url>
+<url>
 <loc>http://loljkpro.tk/about/</loc>
 </url>
 <url>
@@ -173,9 +177,6 @@
 <loc>http://loljkpro.tk/tag/%D0%BA%D0%B0%D0%B4%D0%B6%D0%B8%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%B0%D0%B2%D0%B4%D0%B0/</loc>
 </url>
 <url>
-<loc>http://loljkpro.tk/tag/game/</loc>
-</url>
-<url>
 <loc>http://loljkpro.tk/tag/bug/</loc>
 </url>
 <url>
@@ -203,9 +204,6 @@
 <loc>http://loljkpro.tk/tag/js/</loc>
 </url>
 <url>
-<loc>http://loljkpro.tk/tag/html/</loc>
-</url>
-<url>
 <loc>http://loljkpro.tk/tag/heroku/</loc>
 </url>
 <url>
@@ -225,6 +223,12 @@
 </url>
 <url>
 <loc>http://loljkpro.tk/tag/groupstage/</loc>
+</url>
+<url>
+<loc>http://loljkpro.tk/tag/twtich/</loc>
+</url>
+<url>
+<loc>http://loljkpro.tk/tag/obs/</loc>
 </url>
 <url>
 <loc>http://loljkpro.tk/home/loljkpro/web/loljkpro.tk-jekyll/_site/tag/c/</loc>
@@ -297,5 +301,8 @@
 </url>
 <url>
 <loc>http://loljkpro.tk/home/loljkpro/web/loljkpro.tk-jekyll/_site/podschet-komand-dlya-fentezi-ligi/</loc>
+</url>
+<url>
+<loc>http://loljkpro.tk/home/loljkpro/web/loljkpro.tk-jekyll/_site/twitch-tak-ty-strimish'/</loc>
 </url>
 </urlset>
